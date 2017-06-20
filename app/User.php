@@ -42,7 +42,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     function socialProviders()
     {
-        return $this->hasMany(SocialProviders::class);
+        return $this->hasMany(SocialProvider::class);
     }
 
     protected $rulesets = [

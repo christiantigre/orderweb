@@ -25,8 +25,10 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 
-Route::get('/redirect/{provider}','SocialController@redirect');
-Route::get('/callback/{provider}','SocialController@callback');
+Route::get('/redirect/{provider}','Auth\RegisterController@redirectToProvider');
+Route::get('/callback/{provider}','Auth\RegisterController@handleProviderCallback');
+//Route::get('/redirect/{provider}','SocialController@redirect');
+//Route::get('/callback/{provider}','SocialController@callback');
 
-Route::get('login/facebook', 'Auth\RegisterController@redirectToProvider');
-Route::get('login/facebook/callback', 'Auth\RegisterController@handleProviderCallback');
+//Route::get('login/facebook', 'Auth\RegisterController@redirectToProvider');
+//Route::get('login/facebook/callback', 'Auth\RegisterController@handleProviderCallback');

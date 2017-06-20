@@ -11,5 +11,5 @@ class SocialProvider extends Model
     {
     	return $this->belongTo(User::class);
     }
-
+ 
 }
