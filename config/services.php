@@ -15,24 +15,48 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+    'domain' => env('MAILGUN_DOMAIN'),
+    'secret' => env('MAILGUN_SECRET'),
     ],
 
     'ses' => [
-        'key' => env('SES_KEY'),
-        'secret' => env('SES_SECRET'),
-        'region' => 'us-east-1',
+    'key' => env('SES_KEY'),
+    'secret' => env('SES_SECRET'),
+    'region' => 'us-east-1',
     ],
 
     'sparkpost' => [
-        'secret' => env('SPARKPOST_SECRET'),
+    'secret' => env('SPARKPOST_SECRET'),
     ],
 
     'stripe' => [
-        'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
+    'model' => App\User::class,
+    'key' => env('STRIPE_KEY'),
+    'secret' => env('STRIPE_SECRET'),
     ],
 
-];
+    'facebook' => [
+    'client_id' => env('FACEBOOK_ID'),
+    'client_secret' => env('FACEBOOK_SECRET'),
+    'redirect' => env('FACEBOOK_URL'),
+    ],
+
+    'twitter' => [
+    'client_id' => env('twitter_ID'),
+    'client_secret' => env('twitter_SECRET'),
+    'redirect' => env('twitter_URL'),
+    ],
+
+    'github' => [
+    'client_id' => env('GITHUB_ID'),
+    'client_secret' => env('GITHUB_SECRET'),
+    'redirect' => env('GITHUB_URL'),
+    ],
+
+    'google' => [
+    'client_id' => env('GOOGLE_ID'),
+    'client_secret' => env('GOOGLE_SECRET'),
+    'redirect' => env('GOOGLE_URL'),
+    ],
+
+    ];

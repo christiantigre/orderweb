@@ -160,9 +160,21 @@ return [
          * Acacha AdminLTE template provider
          */
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
-
+        
+        /*
+         *Para administracion de usuarios
+         */
         Acoustep\EntrustGui\EntrustGuiServiceProvider::class,
+
+        /*
+         *Para login con redes sociales
+         */
+        Laravel\Socialite\SocialiteServiceProvider::class,
+
+        
         ],
+
+        
 
     /*
     |--------------------------------------------------------------------------
@@ -207,13 +219,9 @@ return [
     'URL'       => Illuminate\Support\Facades\URL::class,
     'Validator' => Illuminate\Support\Facades\Validator::class,
     'View'      => Illuminate\Support\Facades\View::class,
-
-        /*
-         * Acacha AdminLTE template alias
-         */
-        'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
-
-        'Entrust'=> Zizaco\Entrust\EntrustFacade::class,
+    'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+    'Entrust'=> Zizaco\Entrust\EntrustFacade::class,
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
         ],
 

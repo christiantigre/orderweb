@@ -40,6 +40,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     protected $hashable = ['password'];
 
+    function socialProviders()
+    {
+        return $this->hasMany(SocialProviders::class);
+    }
+
     protected $rulesets = [
 
         'creating' => [

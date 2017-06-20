@@ -23,3 +23,10 @@ Route::group(['middleware' => 'auth'], function () {
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 });
+
+
+Route::get('/redirect/{provider}','SocialController@redirect');
+Route::get('/callback/{provider}','SocialController@callback');
+
+Route::get('login/facebook', 'Auth\RegisterController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\RegisterController@handleProviderCallback');
