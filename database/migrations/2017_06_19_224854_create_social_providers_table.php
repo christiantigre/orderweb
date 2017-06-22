@@ -18,6 +18,7 @@ class CreateSocialProvidersTable extends Migration
             $table->integer('user_id')->unsigned()->references('id')->on('users');
             $table->string('provider_id');
             $table->string('provider');
+            $table->string('avatar',255);
             $table->timestamps();
         });
     }

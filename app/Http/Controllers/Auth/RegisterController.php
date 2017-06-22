@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\SocialProvider;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Socialite;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class RegisterController
@@ -99,7 +100,6 @@ class RegisterController extends Controller
      */
       public function redirectToProvider($provider)
       {
-        //dd('aqui');
         return Socialite::driver($provider)->redirect();
     }
 
@@ -112,40 +112,45 @@ class RegisterController extends Controller
     {
         try{
             $socialUser = Socialite::driver($provider)->user();
-        //dd('si');
-
-            //dd($socialUser);
         }catch(\Exception $e){
-        //dd('no');
-
             return redirect('/');
         }
-
         $socialProvider = SocialProvider::where('provider_id',$socialUser->getId())->first(); 
+        //echo "<img src='".$socialUser->getAvatar() ."'  >";
+        $user = $socialProvider;        
         if(!$socialProvider)
         {
-
             $user = User::firstOrCreate(
                 ['email'=>$socialUser->getEmail()],
-                ['name'=>$socialUser->getName()]
+                ['name'=>$socialUser->getName()],
+                ['perfil'=>$socialUser->getAvatar()],
+                ['social'=>'1']
                 );
+
+            /*$user = User::create([
+                'email' => $socialUser->email,
+                'name' => $socialUser->name,
+                'perfil' => $socialUser->avatar,
+                'social' =>"1",
+            ]);*/
+
+
             $user->SocialProviders()->create(
-                ['provider_id'=>$socialUser->getId(),'provider'=>$provider]
+                ['provider_id'=>$socialUser->getId(),'provider'=>$provider,'avatar'=>$socialUser->getAvatar()]
                 );
+
+            \DB::table('users')
+            ->where('email', $socialUser->getEmail())
+            ->update(['perfil' => $socialUser->getAvatar()]);
+            
+            Auth::login($user,$socialProvider, true);  
+            return redirect('/home');
         }
         else
-
-        //{
-
-            $user = $socialProvider->user;        
-            auth()->login($user);
-            return redirect('/home');
-       // }
-
-
-        //$user = Socialite::driver('facebook')->user();
-        //return $user->getEmail();
-        // $user->token;
+            $user = $socialProvider->user_id; 
+        $authUser = User::where('id', $user)->first();
+        Auth::login($authUser, true);  
+        return redirect('/home');
     }
 
 
