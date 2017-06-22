@@ -134,4 +134,9 @@ return [
     'loggedin'                => 'Logged in!',
     'entering'                => 'Entering...',
     'registered'              => 'User Registered!',
+    'users'                   => 'Usuarios',
+    'products'                   => 'Productos',
+    'config'                   => 'Configuracion',
+    
+
 ];

@@ -44,6 +44,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
+    //protected $redirectTo = '/home';
     protected $redirectTo = '/home';
 
     /**
