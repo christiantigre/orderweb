@@ -11,16 +11,20 @@
 |
 */
 
+
+
 Route::get('/', function () {
 	return view('welcome');
 });
 
-Route::group(['middleware' => 'auth'], function () {
-	Route::get('/admin', function ()    {
-	return view('adminlte::home');
 
-//        // Uses Auth Middleware
-	});
+
+Route::group(['middleware' => ['auth','admin']], function () {
+	Route::get('/admin/home', function (){return view('adminlte::home');	});
+	Route::get('/admin/config','Admin\EmpressController@index');
+	Route::get('/admin/edit/empress/','Admin\EmpressController@edit');
+	//Categorias//
+	Route::resource('/admin/Categories','Admin\CategoryController');
 
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes

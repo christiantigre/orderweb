@@ -1,11 +1,13 @@
 <head>
     <meta charset="UTF-8">
-    <title> AdminLTE 2 with Laravel - @yield('htmlheader_title', 'Your title here') </title>
+    <title> .:Sistema:. - @yield('htmlheader_title', 'Your title here') </title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link href="{{ asset('/css/all.css') }}" rel="stylesheet" type="text/css" />
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset('/plugins/dataTables.bootstrap.css') }}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,6 +28,6 @@
             }
             $trans['adminlte_lang_message'] = trans('adminlte_lang::message');
             echo json_encode($trans);
-        @endphp
-    </script>
-</head>
+            @endphp
+        </script>
+    </head>

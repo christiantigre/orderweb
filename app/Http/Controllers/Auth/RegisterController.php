@@ -45,7 +45,7 @@ class RegisterController extends Controller
      * @var string
      */
     //protected $redirectTo = '/home';
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/admin/home';
 
     /**
      * Create a new controller instance.
@@ -145,13 +145,13 @@ class RegisterController extends Controller
             ->update(['perfil' => $socialUser->getAvatar()]);
             
             Auth::login($user,$socialProvider, true);  
-            return redirect('/home');
+            return redirect('/admin/home');
         }
         else
             $user = $socialProvider->user_id; 
         $authUser = User::where('id', $user)->first();
         Auth::login($authUser, true);  
-        return redirect('/home');
+        return redirect('/admin/home');
     }
 
 

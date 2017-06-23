@@ -2,7 +2,7 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="{{ url('/home') }}" class="logo">
+    <a href="{{ url('admin/home') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>A</b>LT</span>
         <!-- logo for regular state and mobile devices -->
@@ -134,7 +134,7 @@
                             <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="{{ Gravatar::get($user->email) }}-User Image" />
                             @else
                             <li class="user-header">
-                                <img src="{{ Auth::user()->perfil }}" class="img-circle" alt="{{ Gravatar::get($user->email) }}-User Image" />
+                                <img src="{{ Auth::user()->perfil }}" style="height: 50%; width: 50%;" class="img-circle" alt="{{ Gravatar::get($user->email) }}-User Image" />
                                 @endif
                         </center>
                                 

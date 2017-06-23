@@ -137,6 +137,7 @@ return [
     'users'                   => 'Usuarios',
     'products'                   => 'Productos',
     'config'                   => 'Configuracion',
+    'category'                   => 'Categoria',
     
 
 ];
