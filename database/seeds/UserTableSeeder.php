@@ -19,5 +19,23 @@ class UserTableSeeder extends Seeder
             'social' => '1',
             'active' => '1',
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'AndresT',
+            'email' => 'andrestigre69@gmail.com',
+            'password' => '$2y$10$5yFtkI7RFIGAqQBGYtYeh.xwkbqROl61qcDWq1/YSE9y5gxyjIbQ.',
+            'perfil' => '',
+            'social' => '1',
+            'active' => '1',
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Christian',
+            'email' => 'andrescondo17@hotmail.com',
+            'password' => '$2y$10$/tg2QrLFhy/sw94Dh5SRU.bbKZiyaUK6iVlSt8RHlMHXi4Wmj5TBe',
+            'perfil' => '',
+            'social' => '1',
+            'active' => '1',
+        ]);
     }
 }

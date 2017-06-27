@@ -24,10 +24,18 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Category::class, function (Faker\Generator $faker) {
-
 	return [
 	'name' => $faker->sentence(1),
 	'des' => $faker->sentence(10),
+	];
+});
+
+$factory->define(App\Subcategories::class, function (Faker\Generator $faker) {
+	return [
+	'name' => $faker->sentence(1),
+	'description' => $faker->sentence(10),
+	'id_categorie' => '1',
+	'status' => $faker->sentence(1),
 	];
 });
 

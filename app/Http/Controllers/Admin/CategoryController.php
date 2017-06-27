@@ -33,7 +33,7 @@ class CategoryController extends Controller
         $category->name = $request->name;
         $category->des = $request->des;
         $category->save();
-        return redirect('Admin/Categories')->with('info', 'Producto registrado correctamente');
+        return redirect('admin/Categories')->with('info', 'Producto registrado correctamente');
     }
 
 	public function update(CategoryRequest $request, $id){
@@ -42,7 +42,7 @@ class CategoryController extends Controller
         $category->name = $request->name;
         $category->des = $request->des;
         $category->save();
-        return redirect('Admin/Categories')->with('info', 'Producto actualizado correctamente');    	
+        return redirect('admin/Categories')->with('info', 'Producto actualizado correctamente');    	
     }    
 
     public function destroy($id){

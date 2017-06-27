@@ -135,6 +135,7 @@ return [
     'products'                   => 'Productos',
     'config'                   => 'Configuracion',
     'category'                   => 'Categoria',
+    'subcategory'                   => 'Subcategoria',
 
 
 
