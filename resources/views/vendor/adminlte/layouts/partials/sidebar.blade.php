@@ -49,6 +49,7 @@
                     <li><a href="{{ url('admin/config') }}">{{ trans('adminlte_lang::message.config') }}</a></li>
                     <li><a href="{{ Route('Categories.index') }}">{{ trans('adminlte_lang::message.category') }}</a></li>
                     <li><a href="{{ Route('subcategories.index') }}">{{ trans('adminlte_lang::message.subcategory') }}</a></li>
+                    <li><a href="{{ Route('status.index') }}">{{ trans('adminlte_lang::message.status') }}</a></li>
                 </ul>
             </li>
             

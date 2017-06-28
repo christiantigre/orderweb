@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Subcategories;
+use App\Subcategory;
 
 class SubcategoryTableSeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class SubcategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Subcategories::class, 30)->create();
+        factory(Subcategory::class, 30)->create();
         
     }
 }

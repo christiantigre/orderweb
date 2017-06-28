@@ -71,8 +71,10 @@ class SubcategoryController extends Controller
     public function edit($id)
     {        
         $subcategory = SubCategory::find($id);
-        $categories = Category::orderBy('id','DESC')->pluck('name','id');
+        //$categories = Category::orderBy('id','DESC')->pluck('name','id');
+        $categories = Category::pluck('name', 'id');
         
+
         return view('adminlte::layouts.subcategory.edit',compact('subcategory','categories'));
     }
 
@@ -85,7 +87,13 @@ class SubcategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $subcategory = SubCategory::find($id);
+        $subcategory->name = $request->name;
+        $subcategory->description = $request->description;
+        $subcategory->id_categorie = $request->category_id;
+        $subcategory->status = $request->status;
+        $subcategory->save();
+        return redirect('admin/subcategories')->with('info', $request->name.' Actualizado correctamente'); 
     }
 
     /**
@@ -96,6 +104,8 @@ class SubcategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $subcategory = SubCategory::find($id);
+        $subcategory->delete();
+        return back()->with('info','Sub - Categoria '.$subcategory->name.' eliminada');
     }
 }

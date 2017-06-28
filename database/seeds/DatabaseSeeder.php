@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
          $this->call(EmpressTableSeeder::class);
          $this->call(CategoriesTableSeeder::class);
          $this->call(SubcategoryTableSeeder::class);
+         $this->call(StatuTableSeeder::class);
     }
 }

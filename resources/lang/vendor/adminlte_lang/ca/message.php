@@ -136,6 +136,8 @@ return [
     'config'                   => 'Configuracion',
     'category'                   => 'Categoria',
     'subcategory'                   => 'Subcategoria',
+    'status'                   => 'Estados pedido',
+
 
 
 

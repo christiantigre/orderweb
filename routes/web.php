@@ -20,13 +20,19 @@ Route::get('/', function () {
 
 
 Route::group(['middleware' => ['auth','admin']], function () {
+	Route::get('/admin/', function (){return view('adminlte::home');	});
 	Route::get('/admin/home', function (){return view('adminlte::home');	});
 	Route::get('/admin/config','Admin\EmpressController@index');
 	Route::get('/admin/subcategory','Admin\SubcategoryController@index');
 	Route::get('/admin/edit/empress/','Admin\EmpressController@edit');
 	//Categorias//
 	Route::resource('/admin/Categories','Admin\CategoryController');
+	//Sub - Categorias//
 	Route::resource('/admin/subcategories','Admin\SubcategoryController');
+	//Estados pedido//
+	Route::resource('/admin/status','Admin\StatuController');
+	Route::get('admin/listallstatus','Admin\StatuController@listall');
+	Route::post('admin/addstatus','Admin\StatuController@addstatus');
 
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes

@@ -45,6 +45,7 @@
                             <th>Sub Categoria</th>
                             <th>Descripción</th>
                             <th>Categoria</th>
+                            <th>Estado</th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -68,19 +69,27 @@
                             </th>
                             <th>{{ $category->categorie->name }}</th>
                             <th>
+                            @if(($category->status)=='1')
+                              Activado
+                            @else
+                              Desactivado
+                            @endif
+                            </th>
+                            <th>
                               <a href="{{ Route('subcategories.show', $category->id) }}" type="button" class="btn btn-block btn-primary btn-xs">Ver</a>
                             </th>
                             <th>
                               <a href="{{ Route('subcategories.edit', $category->id) }}" type="button" class="btn btn-block btn-warning btn-xs">Editar</a>
                             </th>
                             <th>
-                              <form action="{{ route('Categories.destroy',$category->id) }}" method="POST">
+                              <!--<form action="{{ route('Categories.destroy',$category->id) }}" method="POST">-->
+                              {!! Form::open(['method'=>'DELETE', 'route'=>['subcategories.destroy', $category->id]]) !!}
                                 {{ csrf_field() }}
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-block btn-danger btn-xs">Eliminar</button>
+                                <button type="submit" onclick="return confirm('Esta seguro que desea eliminar el registro?')" class="btn btn-block btn-danger btn-xs">Eliminar</button>
                                 <!--<a href="{{ Route('Categories.show', $category->id) }}" type="button" class="btn btn-block btn-danger btn-xs">Eliminar-->
                               </a>
-                            </form>
+                            {!! Form::close() !!}
                           </th>
                         </tr>
                         <?Php      $i++;          ?>

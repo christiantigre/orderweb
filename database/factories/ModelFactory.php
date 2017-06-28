@@ -30,7 +30,7 @@ $factory->define(App\Category::class, function (Faker\Generator $faker) {
 	];
 });
 
-$factory->define(App\Subcategories::class, function (Faker\Generator $faker) {
+$factory->define(App\Subcategory::class, function (Faker\Generator $faker) {
 	return [
 	'name' => $faker->sentence(1),
 	'description' => $faker->sentence(10),

@@ -74,7 +74,7 @@
                               <form action="{{ route('Categories.destroy',$category->id) }}" method="POST">
                               {{ csrf_field() }}
                               <input type="hidden" name="_method" value="DELETE">
-                              <button type="submit" class="btn btn-block btn-danger btn-xs">Eliminar</button>
+                              <button type="submit" onclick="return confirm('Esta seguro que desea eliminar el registro?')" class="btn btn-block btn-danger btn-xs">Eliminar</button>
                                 <!--<a href="{{ Route('Categories.show', $category->id) }}" type="button" class="btn btn-block btn-danger btn-xs">Eliminar-->
                                 </a>
                               </form>

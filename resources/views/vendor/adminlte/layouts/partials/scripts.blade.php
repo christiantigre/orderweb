@@ -10,6 +10,9 @@
       <!-- DataTables -->
       <script src="{{ url ('plugins/jquery.dataTables.min.js') }}"  type="text/javascript"></script>
       <script src="{{ url ('plugins/dataTables.bootstrap.min.js') }}"  type="text/javascript"></script>
+      <script src="{{ url ('js/script.js') }}"  type="text/javascript"></script>
+      
+
       <!-- page script -->
       <script>
         $(function () {
