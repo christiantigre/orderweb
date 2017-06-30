@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth','admin']], function () {
 	Route::resource('/admin/status','Admin\StatuController');
 	Route::get('admin/listallstatus','Admin\StatuController@listall');
 	Route::post('admin/addstatus','Admin\StatuController@addstatus');
+	Route::get('admin/updatestatus/{id}','Admin\StatuController@edit');
 
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes

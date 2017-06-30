@@ -27,7 +27,9 @@
 						<!-- Main content -->
 						<section class="content">
 							<h3 class="box-title">Listado de Estado de pedidos</h3>
-
+								<p id="mensaje">
+									
+								</p>
 							<div class="row">
 								<div class="col-xs-12">
 									<div class="box">
@@ -50,7 +52,7 @@
 					{{ csrf_field() }}
 <!--<input type="text" class="form-control" id="name" name="name"
 	placeholder="Nuevo estado..." required>-->
-	{!! Form::text('statu',null,['id'=>'statu','class'=>'form-control','placeholder'=>'Nuevo estado...','autofocus'=>'autofocus',
+	{!! Form::text('statunew',null,['id'=>'statunew','class'=>'form-control','placeholder'=>'Nuevo estado...','autofocus'=>'autofocus',
 	'autocomplete'=>'off']) !!}
 	<p class="error text-center alert alert-danger hidden"></p>
 </div>
@@ -88,7 +90,6 @@
 </div>
 </div>
 </div>
-
 <script>
 
 	$(document).ready(function(){
@@ -115,31 +116,62 @@
 			}
 		});
 	}
-
+	var Mostrar = function(id){
+		var route = "{{url('admin/updatestatus')}}/"+id;
+		$.get(route, function(data){ 
+			$("#statu").val(data.statu);
+			$("#id").val(data.id);
+			console.log(data.statu);
+			console.log(data.id);
+		});
+	}
 	$(document).ready(function() {
 		$.ajaxSetup({
 			headers: {'X-CSRF-Token': $('meta[name=_token]').attr('content')}
 		});
 	});
-
-	/*$("#submit").click(function (e) {
-		e.preventDefault();
-		var nombre = $('#statu').val();
-		$.ajax({
-			type: "get",
-			url: '{{ url("admin/addstatus") }}',
-			data: {
-				nombre: nombre
-			}, success: function (msg) {
-				alert("Se ha realizado el POST con exito "+msg);
-			}
-		});
-	});*/
 	$(document).ready(function() {
+		$("#actualizar").click(function()
+		{
+			var statumod = $("#statu").val();
+			var idmod = $("#id").val();
+			var route = "{{url('admin/upstatus/')}}"+idmod+"";
+			var token = $("#token").val();
+			var dataString = "statu="+statumod;
+			$.ajax({
+				url: route,
+				headers: {'X-CSRF-TOKEN': token},
+				type: 'post',
+				dataType: 'json',
+				data: dataString,
+				success: function(data){
+					if (data.success == 'true')
+					{
+						console.log(data);
+						console.log('true');
+						liststatus();
+					//$("#myModal").modal('toggle');
+					//$("#message-update").fadeIn();
+				}
+			},
+			error:function(data)
+			{
+				console.log(data);
+				console.log('false');
+				//$("#error").html(data.responseJSON.name);
+				//$("#message-error").fadeIn();
+				if (data.status == 422) {
+					console.clear();
+				}
+			}  
+		});
+		});
+	});
 
+	$(document).ready(function() {
 		$("#Grabar").click(function(event)
 		{
-			var statu = $("#statu").val();
+			var statu = $("#statunew").val();
 			var token = $("input[name=_token]").val();
 			var route = '{{ url("admin/addstatus") }}';
 			var dataSting = "statu="+statu;
@@ -153,21 +185,27 @@
 				{
 					console.log(data);
 					liststatus();
+					$("#statunew").val("");
 					if (data.success=='true') {
-					console.log('Guardado');
+						console.log('Guardado');
+						var historial = $('#mensaje').html();
+						$('#mensaje').html(historial + "<p><div class='alert alert-success alert-block'><button type='button' class='close' data-dismiss='alert'>×</button><strong>Guardado exitosamente</strong></div></p>"); 
 					}
 				},
 				error:function(data)
 				{
 					console.log('Error al guardar');
-
 				}  
 			})
 
 		});
+
 	});
 
 
+
+
 </script>
+
 
 @endsection
