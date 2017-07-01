@@ -137,6 +137,9 @@ return [
     'category'                   => 'Categoria',
     'subcategory'                   => 'Subcategoria',
     'status'                   => 'Estados pedido',
+    'country'                   => 'Pais',
+    'province'                   => 'Provincia',
+    'city'                   => 'Ciudad',
 
 
 

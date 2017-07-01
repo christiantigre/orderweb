@@ -141,5 +141,8 @@ return [
     'subcategory'                   => 'Subcategoria',
     'status'                   => 'Estados pedido',
     
+    'country'                   => 'Pais',
+    'province'                   => 'Provincia',
+    'city'                   => 'Ciudad',
 
 ];
