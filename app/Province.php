@@ -13,8 +13,7 @@ class Province extends Model
   'id_country',
   ];
 
-  protected $rules = [
-  'province'      => 'required|unique|max:15',
-  'postal'      => 'max:15',
-  ];
+  public function country(){
+    return $this->belongsTo('App\Country','id_country');
+  }
 }

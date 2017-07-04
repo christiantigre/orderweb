@@ -13,6 +13,6 @@ class parroquia extends Model
 	];
 
 	protected $rules = [
-	'parroquia'      => 'required|unique|max:15',
+	'parroquia'      => 'required|max:15',
 	];
 }

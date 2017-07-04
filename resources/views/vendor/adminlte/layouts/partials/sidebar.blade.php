@@ -50,8 +50,8 @@
                     <li><a href="{{ Route('Categories.index') }}">{{ trans('adminlte_lang::message.category') }}</a></li>
                     <li><a href="{{ Route('subcategories.index') }}">{{ trans('adminlte_lang::message.subcategory') }}</a></li>
                     <li><a href="{{ Route('status.index') }}">{{ trans('adminlte_lang::message.status') }}</a></li>
-                    <li><a href="{{ Route('status.index') }}">{{ trans('adminlte_lang::message.country') }}</a></li>
-                    <li><a href="{{ Route('status.index') }}">{{ trans('adminlte_lang::message.province') }}</a></li>
+                    <li><a href="{{ Route('countries.index') }}">{{ trans('adminlte_lang::message.country') }}</a></li>
+                    <li><a href="{{ Route('provinces.index') }}">{{ trans('adminlte_lang::message.province') }}</a></li>
                     <li><a href="{{ Route('status.index') }}">{{ trans('adminlte_lang::message.city') }}</a></li>
                 </ul>
             </li>

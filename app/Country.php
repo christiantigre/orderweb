@@ -16,4 +16,10 @@ class Country extends Model
   'iso'      => 'unique|max:3',
   'country'      => 'required|unique|max:15',
   ];
+
+  public function provinces()
+  {
+    return $this->hasMany('App\Province', 'id');
+  }
+
 }

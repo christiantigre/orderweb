@@ -579,6 +579,82 @@ class CountryTableSeeder extends Seeder
         DB::table('parroquias')->insert(['parroquia'=> 'TOMEBAMBA','id_canton'=>'5']);
         DB::table('parroquias')->insert(['parroquia'=> 'DUG DUG','id_canton'=>'5']);
 
+        DB::table('parroquias')->insert(['parroquia'=> 'CAMILO PONCE ENRÍQUEZ (CAB. EN RÍO 7 DE MOLLEPONGO)','id_canton'=>'6']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN RAFAEL DE SHARUG','id_canton'=>'6']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN FERNANDO','id_canton'=>'7']);
+        DB::table('parroquias')->insert(['parroquia'=> 'CHUMBLÍN','id_canton'=>'7']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SANTA ISABEL (CHAGUARURCO)','id_canton'=>'8']);
+        DB::table('parroquias')->insert(['parroquia'=> 'ABDÓN CALDERÓN (LA UNIÓN)','id_canton'=>'8']);
+        DB::table('parroquias')->insert(['parroquia'=> 'EL CARMEN DE PIJILÍ','id_canton'=>'8']);
+        DB::table('parroquias')->insert(['parroquia'=> 'ZHAGLLI (SHAGLLI)','id_canton'=>'8']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN SALVADOR DE CAÑARIBAMBA','id_canton'=>'8']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SIGSIG','id_canton'=>'9']);
+        DB::table('parroquias')->insert(['parroquia'=> 'CUCHIL (CUTCHIL)','id_canton'=>'9']);
+        DB::table('parroquias')->insert(['parroquia'=> 'GIMA','id_canton'=>'9']);
+        DB::table('parroquias')->insert(['parroquia'=> 'GUEL','id_canton'=>'9']);
+        DB::table('parroquias')->insert(['parroquia'=> 'LUDO','id_canton'=>'9']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN BARTOLOMÉ','id_canton'=>'9']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN JOSÉ DE RARANGA','id_canton'=>'9']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN FELIPE DE OÑA CABECERA CANTONAL','id_canton'=>'10']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SUSUDEL','id_canton'=>'10']);
+        DB::table('parroquias')->insert(['parroquia'=> 'CHORDELEG','id_canton'=>'11']);
+        DB::table('parroquias')->insert(['parroquia'=> 'PRINCIPAL','id_canton'=>'11']);
+        DB::table('parroquias')->insert(['parroquia'=> 'LA UNIÓN','id_canton'=>'11']);
+        DB::table('parroquias')->insert(['parroquia'=> 'LUIS GALARZA ORELLANA (CAB.EN DELEGSOL)','id_canton'=>'11']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN MARTÍN DE PUZHIO','id_canton'=>'11']);
+        DB::table('parroquias')->insert(['parroquia'=> 'EL PAN','id_canton'=>'12']);
+        DB::table('parroquias')->insert(['parroquia'=> 'AMALUZA','id_canton'=>'12']);
+
+        DB::table('parroquias')->insert(['parroquia'=> 'PALMAS','id_canton'=>'12']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN VICENTE','id_canton'=>'12']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SEVILLA DE ORO','id_canton'=>'13']);
+        DB::table('parroquias')->insert(['parroquia'=> 'AMALUZA','id_canton'=>'13']);
+        DB::table('parroquias')->insert(['parroquia'=> 'PALMAS','id_canton'=>'13']);
+        DB::table('parroquias')->insert(['parroquia'=> 'GUACHAPALA','id_canton'=>'14']);
+        DB::table('parroquias')->insert(['parroquia'=> 'CAMILO PONCE ENRÍQUEZ','id_canton'=>'15']);
+        DB::table('parroquias')->insert(['parroquia'=> 'EL CARMEN DE PIJILÍ','id_canton'=>'15']);
+        DB::table('parroquias')->insert(['parroquia'=> 'ÁNGEL POLIBIO CHÁVES','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'GABRIEL IGNACIO VEINTIMILLA','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'GUANUJO','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'GUARANDA','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'FACUNDO VELA','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'GUANUJO','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'JULIO E. MORENO (CATANAHUÁN GRANDE)','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'LAS NAVES','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SALINAS','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN LORENZO','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN SIMÓN (YACOTO)','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SANTA FÉ (SANTA FÉ)','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SIMIÁTUG','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN LUIS DE PAMBIL','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'CHILLANES','id_canton'=>'2']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN JOSÉ DEL TAMBO (TAMBOPAMBA)','id_canton'=>'2']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN JOSÉ DE CHIMBO','id_canton'=>'3']);
+        DB::table('parroquias')->insert(['parroquia'=> 'ASUNCIÓN (ASANCOTO)','id_canton'=>'3']);
+
+        DB::table('parroquias')->insert(['parroquia'=> 'CALUMA','id_canton'=>'3']);
+        DB::table('parroquias')->insert(['parroquia'=> 'MAGDALENA (CHAPACOTO)','id_canton'=>'3']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN SEBASTIÁN','id_canton'=>'3']);
+        DB::table('parroquias')->insert(['parroquia'=> 'TELIMBELA','id_canton'=>'3']);
+        DB::table('parroquias')->insert(['parroquia'=> 'ECHEANDÍA','id_canton'=>'4']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN MIGUEL','id_canton'=>'5']);
+        DB::table('parroquias')->insert(['parroquia'=> 'BALSAPAMBA','id_canton'=>'5']);
+        DB::table('parroquias')->insert(['parroquia'=> 'BILOVÁN','id_canton'=>'5']);
+        DB::table('parroquias')->insert(['parroquia'=> 'RÉGULO DE MORA','id_canton'=>'5']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN PABLO (SAN PABLO DE ATENAS)','id_canton'=>'5']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SANTIAGO','id_canton'=>'5']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN VICENTE','id_canton'=>'5']);
+        DB::table('parroquias')->insert(['parroquia'=> 'CALUMA','id_canton'=>'6']);
+        DB::table('parroquias')->insert(['parroquia'=> 'LAS MERCEDES','id_canton'=>'7']);
+        DB::table('parroquias')->insert(['parroquia'=> 'LAS NAVES','id_canton'=>'7']);
+        DB::table('parroquias')->insert(['parroquia'=> 'AURELIO BAYAS MARTÍNEZ','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'AZOGUES','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'BORRERO','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'SAN FRANCISCO','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'AZOGUES','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'COJITAMBO','id_canton'=>'1']);
+        DB::table('parroquias')->insert(['parroquia'=> 'DÉLEG','id_canton'=>'1']);
+
 
 
 
