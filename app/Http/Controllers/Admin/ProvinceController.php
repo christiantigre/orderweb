@@ -49,13 +49,10 @@ class ProvinceController extends Controller
      */
     public function store(ProvinceRequest $request)
     {
-        $pais = $request->id_country;
-        $country = Country::where('country',$pais)->get()->first();
-        $id_pais = $country->id;
         $provincia = new Province;
         $provincia->province = $request->province;
         $provincia->postal = $request->postal;
-        $provincia->id_country = $id_pais;
+        $provincia->id_country = $request->id_country;
         $provincia->save(); 
         
         Session::flash('success', $request->province.' Registrado correctamente');
@@ -70,7 +67,8 @@ class ProvinceController extends Controller
      */
     public function show($id)
     {
-        //
+        $province = Province::find($id);
+        return view('adminlte::layouts.province.show',compact('province'));//
     }
 
     /**
@@ -81,10 +79,10 @@ class ProvinceController extends Controller
      */
     public function edit($id)
     {
+        //$countries = Country::orderBy('id','DESC')->get();
         $countries = Country::orderBy('id','DESC')->get();
-
-        $province = Province::find($id);
-        return view('adminlte::layouts.province.edit', compact('province','countries'));
+        $province = Province::FindOrFail($id);
+        return view('adminlte::layouts.province.edit', array('province'=>$province,'countries'=>$countries));
     }
 
     /**
@@ -94,18 +92,18 @@ class ProvinceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProvinceRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        $pais = $request->id_country;
-        $country = Country::where('country',$pais)->get()->first();
-        $id_pais = $country->id;
-        $province = Province::find($id);
+        /*$province = Province::find($id);
         $province->province = $request->province;
         $province->postal = $request->postal;
-        $province->id_country = $id_pais;
-        $province->save(); 
+        $province->id_country = $request->id_country;
+        $province->update(); */
+
+        $prov = Province::findOrFail($id);  //
+        $prov->update($request->all());
         return redirect()->route('provinces.index')
-        ->with('info','Provincia actualizada');
+        ->with('success',$request->province.' Provincia actualizada');
     }
 
     /**
@@ -116,6 +114,8 @@ class ProvinceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $province = Province::find($id);
+        $province->delete();
+        return back()->with('warning','Provincia '.$province->province.' eliminada');
     }
 }

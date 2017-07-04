@@ -139,7 +139,8 @@ return [
     'status'                   => 'Estados pedido',
     'country'                   => 'Pais',
     'province'                   => 'Provincia',
-    'city'                   => 'Ciudad',
+    'city'                   => 'Canton',
+    'parroq'                   => 'Parroquias',
 
 
 

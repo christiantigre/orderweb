@@ -50,13 +50,33 @@
                     <li><a href="{{ Route('Categories.index') }}">{{ trans('adminlte_lang::message.category') }}</a></li>
                     <li><a href="{{ Route('subcategories.index') }}">{{ trans('adminlte_lang::message.subcategory') }}</a></li>
                     <li><a href="{{ Route('status.index') }}">{{ trans('adminlte_lang::message.status') }}</a></li>
-                    <li><a href="{{ Route('countries.index') }}">{{ trans('adminlte_lang::message.country') }}</a></li>
-                    <li><a href="{{ Route('provinces.index') }}">{{ trans('adminlte_lang::message.province') }}</a></li>
-                    <li><a href="{{ Route('status.index') }}">{{ trans('adminlte_lang::message.city') }}</a></li>
-                </ul>
-            </li>
-            
-        </ul><!-- /.sidebar-menu -->
-    </section>
-    <!-- /.sidebar -->
+
+                    <li class="treeview">
+                      <a href="#">
+                          <i class="fa fa-share"></i> <span>Localidades</span>
+                          <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                          </span>
+                      </a>
+                      <ul class="treeview-menu">
+                          <li><a href="{{ Route('countries.index') }}">{{ trans('adminlte_lang::message.country') }}</a></li>
+                          <li><a href="{{ Route('provinces.index') }}">{{ trans('adminlte_lang::message.province') }}</a></li>
+                          <li><a href="{{ Route('cantones.index') }}">{{ trans('adminlte_lang::message.city') }}</a></li>
+                          <li><a href="{{ Route('parroquias.index') }}">{{ trans('adminlte_lang::message.parroq') }}</a></li>
+                      </ul>
+                  </li>
+
+
+
+
+
+
+
+                  
+              </ul>
+          </li>
+
+      </ul><!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
 </aside>

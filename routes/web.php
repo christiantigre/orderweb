@@ -41,8 +41,12 @@ Route::group(['middleware' => ['auth','admin']], function () {
 	//Provinces//
 	Route::resource('/admin/provinces','Admin\ProvinceController');
 	Route::get('admin/listprovinces','Admin\ProvinceController@listall');
-	
-
+	//Cantones//
+	Route::resource('/admin/cantones','Admin\CantonController');
+	Route::get('admin/listcantones','Admin\CantonController@listall');
+	//Parroquias//
+	Route::resource('/admin/parroquias','Admin\ParroquiaController');	
+	Route::get('admin/listparroquias','Admin\ParroquiaController@listall');
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 });

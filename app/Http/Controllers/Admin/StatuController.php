@@ -19,7 +19,7 @@ class StatuController extends Controller
     {       
         //Session::flash('success','Inicio');
      return view('adminlte::layouts.statu.index');
- }
+    }
 
     /**
      * Show the form for creating a new resource.

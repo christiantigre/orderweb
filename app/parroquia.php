@@ -10,9 +10,12 @@ class parroquia extends Model
 	'id',
 	'parroquia',
 	'id_canton',
+	'postal',
 	];
 
-	protected $rules = [
-	'parroquia'      => 'required|max:15',
-	];
+	public function canton(){
+		return $this->belongsTo('App\canton','id_canton');
+	}
+
+
 }

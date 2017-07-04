@@ -16,7 +16,7 @@
       <div class="box">
         <div class="box-header with-border">
           <h3 class="box-title">
-            <!--titulo ventana-->Actualizar Provincia
+            <!--titulo ventana-->Editar Parroquia
           </h3>
 
           <div class="box-tools pull-right">
@@ -32,44 +32,15 @@
               <div class="box">
                 <div class="box-body">
                   @include('adminlte::errors.errors')
-                  {!! Form::model($province, ['route'=>['provinces.update', $province->id], 'method'=>'PUT']) !!}
+                  {!! Form::model($parroquia, ['route'=>['parroquias.update', $parroquia->id], 'method'=>'PUT']) !!}
                   <div class="box-body">
-
-                    <div class="form-group">
-                      {!! Form::label('pais','Pais',['class'=>'col-sm-2 control-label',]) !!}
-                      <div class="col-sm-10">
-                        
-                        <select name="id_country" class="form-control">
-                          @foreach($countries as $country)
-                          <option value="{{ $country->id }}" @if($province->id_country == $country->id) selected @endif>{{ $country->country }}</option>
-                          @endforeach
-                        </select>
-
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      {!! Form::label('provincia','Provincia',['class'=>'col-sm-2 control-label']) !!}
-
-                      <div class="col-sm-10">
-                        {!! Form::text('province',null,['class'=>'form-control','autocomplete'=>'off','placeholder'=>'Nombre provincia ...']) !!}
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      {!! Form::label('postal','Postal',['class'=>'col-sm-2 control-label']) !!}
-
-                      <div class="col-sm-10">
-                        {!! Form::text('postal',null,['class'=>'form-control','autocomplete'=>'off','placeholder'=>'Cod. postal ...']) !!}
-                        
-                      </div>
-                    </div>
+                    @include('adminlte::layouts.parroquia.form')
                     <div class="form-group"></div>
                   </div>
                   <!-- /.box-body -->
                   <div class="box-footer">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <a href="{{ Route('provinces.index') }}" type="button" class="btn btn-default pull-right">Cancelar</a>
+                      <a href="{{ Route('parroquias.index') }}" type="button" class="btn btn-default pull-right">Cancelar</a>
                       {!! Form::submit('Guardar',['class'=>'btn btn-success pull-right']) !!}
                     </div>
                   </div>

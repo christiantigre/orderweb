@@ -16,4 +16,11 @@ class Province extends Model
   public function country(){
     return $this->belongsTo('App\Country','id_country');
   }
+
+  public function canton()
+  {
+    return $this->hasMany('App\canton', 'id');
+  }
+
+
 }

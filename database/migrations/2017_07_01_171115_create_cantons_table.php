@@ -15,7 +15,8 @@ class CreateCantonsTable extends Migration
     {
         Schema::create('cantons', function (Blueprint $table) {
             $table->increments('id');            
-            $table->String('canton','15');
+            $table->String('canton','35');
+            $table->String('postal','15');
             $table->integer('id_province')->unsigned();
             $table->foreign('id_province')->references('id')->on('provinces');
             $table->timestamps();

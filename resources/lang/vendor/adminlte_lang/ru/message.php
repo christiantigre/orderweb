@@ -141,5 +141,6 @@ return [
 
     'country'                   => 'Pais',
     'province'                   => 'Provincia',
-    'city'                   => 'Ciudad',
+    'city'                   => 'Canton',
+    'parroq'                   => 'Parroquias',
     ];

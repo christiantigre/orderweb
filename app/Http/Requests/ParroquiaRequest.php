@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ProvinceRequest extends FormRequest
+class ParroquiaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,19 +24,19 @@ class ProvinceRequest extends FormRequest
     public function rules()
     {
         return [
-        'province' => 'required|unique:provinces',
+        'parroquia' => 'required|unique:parroquias|max:35',
         'postal' => 'max:15',
-        'id_country' => 'required'
+        'id_canton' => 'required',
         ];
     }
 
     public function messages()
     {
         return [
-        'province.required' => 'El pais es obligatorio.',
-        'province.unique' => 'La provincia ya esta ingresada.',
+        'parroquia.required' => 'La parroquia es obligatoria.',
+        'parroquia.unique' => 'La parroquia ya esta ingresada.',
         'postal.max:15' => 'El codigo postal ha exedido su limite.',
-        'id_country.required' => 'El pais es obligatorio',
+        'id_canton.required' => 'El Canton es obligatorio',
         ];
     }
 }

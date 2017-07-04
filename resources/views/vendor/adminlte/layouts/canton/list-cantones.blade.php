@@ -2,9 +2,9 @@
 	<thead>
 		<tr>
 			<th>#</th>
-			<th>Provincia</th>
+			<th>Canton</th>
 			<th>Cod postal</th>
-			<th>Pais</th>
+			<th>Provincia</th>
 			<th></th>
 			<th></th>
 			<th></th>
@@ -12,32 +12,32 @@
 	</thead>
 	<tbody>            
 		<?Php      $i=1;          ?>
-		@foreach($provinces as $province)
+		@foreach($cantones as $canton)
 		<tr>
 			<th><?Php      echo $i;          ?></th>
 			<th>
 				<strong>
-					{{ $province->province }}
+					{{ $canton->canton }}
 				</strong>
 			</th>
 			<th>
 				<strong>
-					{{ $province->postal }}
+					{{ $canton->postal }}
 				</strong>
 			</th>
 			<th>
 				<strong>
-					{{ $province->country->country }}
+					{{ $canton->province->province }}
 				</strong>
 			</th>
 			<th>
-				<a href="{{ Route('provinces.show', $province->id) }}" type="button" class="btn btn-block btn-primary btn-xs">Ver</a>
+				<a href="{{ Route('cantones.show', $canton->id) }}" type="button" class="btn btn-block btn-primary btn-xs">Ver</a>
 			</th>
 			<th>
-				<a href="{{ Route('provinces.edit', $province->id) }}" type="button" class="btn btn-block btn-warning btn-xs">Editar</a>
+				<a href="{{ Route('cantones.edit', $canton->id) }}" type="button" class="btn btn-block btn-warning btn-xs">Editar</a>
 			</th>
 			<th>				
-				{!! Form::open(['method'=>'DELETE', 'route'=>['provinces.destroy', $province->id]]) !!}
+				{!! Form::open(['method'=>'DELETE', 'route'=>['cantones.destroy', $canton->id]]) !!}
 				{{ csrf_field() }}
 				<input type="hidden" name="_method" value="DELETE">
 				<button type="submit" onclick="return confirm('Esta seguro que desea eliminar el registro?')" class="btn btn-block btn-danger btn-xs">Eliminar</button>				
