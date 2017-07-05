@@ -12,10 +12,13 @@
       <script src="{{ url ('plugins/dataTables.bootstrap.min.js') }}"  type="text/javascript"></script>
       <script src="{{ url ('/js/script.js') }}"  type="text/javascript"></script>
       
-
+      <!-- bootstrap color picker -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.3/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.3/js/bootstrap-colorpicker.min.js"></script>
       <!-- page script -->
       <script>
-      
+
 
 
 
@@ -31,5 +34,8 @@
           });
         });
       </script>
+      <script>
+  //Colorpicker
+  $(".my-colorpicker1").colorpicker();
+</script>
 
-      

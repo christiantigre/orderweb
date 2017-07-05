@@ -144,4 +144,9 @@ return [
     'city'                   => 'Canton',
     'parroq'                   => 'Parroquias',
 
+    'marca'                   => 'Marca',
+    'colores'                   => 'Color',
+    'tamano'                   => 'Tamaños',
+    'proveedor'                   => 'Proveedores',
+
 ];

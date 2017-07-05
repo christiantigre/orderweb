@@ -9,6 +9,9 @@
     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('/plugins/dataTables.bootstrap.css') }}">
 
+    <!-- Bootstrap Color Picker -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,7 +20,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
     <script>
+
         //See https://laracasts.com/discuss/channels/vue/use-trans-in-vuejs
         window.trans = @php
             // copy all translations from /resources/lang/CURRENT_LOCALE/* to global JS variable

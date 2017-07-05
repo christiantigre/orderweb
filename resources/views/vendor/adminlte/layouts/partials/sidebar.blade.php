@@ -64,15 +64,15 @@
                           <li><a href="{{ Route('cantones.index') }}">{{ trans('adminlte_lang::message.city') }}</a></li>
                           <li><a href="{{ Route('parroquias.index') }}">{{ trans('adminlte_lang::message.parroq') }}</a></li>
                       </ul>
-                  </li>
+                    </li>
+
+                    <li><a href="{{ Route('marcas.index') }}">{{ trans('adminlte_lang::message.marca') }}</a></li>           
+                    <li><a href="{{ Route('colores.index') }}">{{ trans('adminlte_lang::message.colores') }}</a></li>           
+                    <li><a href="{{ Route('sizes.index') }}">{{ trans('adminlte_lang::message.tamano') }}</a></li>           
+                    <li><a href="{{ Route('marcas.index') }}">{{ trans('adminlte_lang::message.proveedor') }}</a></li>           
 
 
 
-
-
-
-
-                  
               </ul>
           </li>
 

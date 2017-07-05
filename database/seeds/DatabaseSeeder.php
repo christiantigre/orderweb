@@ -19,5 +19,8 @@ class DatabaseSeeder extends Seeder
          $this->call(SubcategoryTableSeeder::class);
          $this->call(StatuTableSeeder::class);
          $this->call(CountryTableSeeder::class);
+         $this->call(MarcaTableSeeder::class);
+         $this->call(ColorTableSeeder::class);
+         $this->call(SizeTableSeeder::class);
     }
 }
