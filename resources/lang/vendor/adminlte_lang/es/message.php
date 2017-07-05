@@ -148,5 +148,6 @@ return [
     'tamano'                   => 'Tamaños',
     'proveedor'                   => 'Proveedores',
     'money'                   => 'Moneda',
+    'pay'                   => 'Tipos Pagos',
     
 ];

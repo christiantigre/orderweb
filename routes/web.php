@@ -59,6 +59,9 @@ Route::group(['middleware' => ['auth','admin']], function () {
 	//Money//
 	Route::resource('/admin/money','Admin\MoneyController');
 	Route::get('admin/listmoney','Admin\MoneyController@listall');
+	//Pay Methods//
+	Route::resource('/admin/pay','Admin\PayController');
+	Route::get('admin/listpay','Admin\PayController@listall');
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 });
