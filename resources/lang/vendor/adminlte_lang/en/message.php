@@ -150,5 +150,6 @@ return [
     'colores'                   => 'Color',
     'tamano'                   => 'Tamaños',
     'proveedor'                   => 'Proveedores',
+    'money'                   => 'Moneda',
 
     ];

@@ -14,7 +14,11 @@ class CreateMoneyTable extends Migration
     public function up()
     {
         Schema::create('money', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id');                      
+            $table->String('money','20')->unique();
+            $table->String('abreviatura','5')->unique();
+            $table->String('img','255')->nullable();
+            $table->boolean('statu');
             $table->timestamps();
         });
     }

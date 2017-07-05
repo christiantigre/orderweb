@@ -56,6 +56,9 @@ Route::group(['middleware' => ['auth','admin']], function () {
 	//Size//
 	Route::resource('/admin/sizes','Admin\SizeController');
 	Route::get('admin/listsizes','Admin\SizeController@listall');
+	//Money//
+	Route::resource('/admin/money','Admin\MoneyController');
+	Route::get('admin/listmoney','Admin\MoneyController@listall');
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 });

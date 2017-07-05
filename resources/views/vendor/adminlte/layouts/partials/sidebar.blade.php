@@ -69,6 +69,7 @@
                     <li><a href="{{ Route('marcas.index') }}">{{ trans('adminlte_lang::message.marca') }}</a></li>           
                     <li><a href="{{ Route('colores.index') }}">{{ trans('adminlte_lang::message.colores') }}</a></li>           
                     <li><a href="{{ Route('sizes.index') }}">{{ trans('adminlte_lang::message.tamano') }}</a></li>           
+                    <li><a href="{{ Route('money.index') }}">{{ trans('adminlte_lang::message.money') }}</a></li>           
                     <li><a href="{{ Route('marcas.index') }}">{{ trans('adminlte_lang::message.proveedor') }}</a></li>           
 
 

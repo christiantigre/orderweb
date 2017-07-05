@@ -11,6 +11,7 @@ class MoneyTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('money')->insert(['id'=>'1','money'=>'Dolar','abreviatura'=>'DL','img'=>'0','statu' => '1']);
+        DB::table('money')->insert(['id'=>'2','money'=>'Pesos','abreviatura'=>'PS','img'=>'0','statu' => '1']);
     }
 }

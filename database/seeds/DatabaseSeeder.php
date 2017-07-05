@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
          $this->call(MarcaTableSeeder::class);
          $this->call(ColorTableSeeder::class);
          $this->call(SizeTableSeeder::class);
+         $this->call(MoneyTableSeeder::class);
     }
 }
