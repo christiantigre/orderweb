@@ -131,23 +131,27 @@ return [
     'loggedin'                => 'Login correcto!',
     'entering'                => 'Entrando...',
     'registered'              => 'Usuario registrado!',
+    
+    'emp'                   => 'Empresa',
     'users'                   => 'Usuarios',
     'products'                   => 'Productos',
     'config'                   => 'Configuracion',
-    'category'                   => 'Categoria',
-    'subcategory'                   => 'Subcategoria',
-    'status'                   => 'Estados pedido',
-    
-    'country'                   => 'Pais',
-    'province'                   => 'Provincia',
-    'city'                   => 'Canton',
+    'category'                   => 'Categorias',
+    'subcategory'                   => 'Subcategorias',
+    'status'                   => 'Estados pedido',       
+
+    'country'                   => 'Paises',
+    'province'                   => 'Provincias',
+    'city'                   => 'Cantones',
     'parroq'                   => 'Parroquias',
 
-    'marca'                   => 'Marca',
-    'colores'                   => 'Color',
+    'marca'                   => 'Marcas',
+    'colores'                   => 'Colores',
     'tamano'                   => 'Tamaños',
     'proveedor'                   => 'Proveedores',
-    'money'                   => 'Moneda',
+    'money'                   => 'Monedas',
     'pay'                   => 'Tipos Pagos',
-    
+    'sales'                   => 'Ventas',
+    'clients'                   => 'Clientes',
+    'employees'                   => 'Empleados',
 ];

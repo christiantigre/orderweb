@@ -134,6 +134,8 @@ return [
     'loggedin'                => 'Logged in!',
     'entering'                => 'Entering...',
     'registered'              => 'User Registered!',
+    
+    'emp'                   => 'Empresa',
     'users'                   => 'Usuarios',
     'products'                   => 'Productos',
     'config'                   => 'Configuracion',
@@ -153,4 +155,7 @@ return [
     'money'                   => 'Moneda',
     'pay'                   => 'Tipos Pagos',
 
+    'sales'                   => 'Ventas',
+    'clients'                   => 'Clientes',
+    'employees'                   => 'Empleados',
     ];
