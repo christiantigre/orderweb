@@ -45,7 +45,7 @@ class RegisterController extends Controller
      * @var string
      */
     //protected $redirectTo = '/home';
-    protected $redirectTo = '/admin/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -133,26 +133,26 @@ class RegisterController extends Controller
                 'name' => $socialUser->name,
                 'perfil' => $socialUser->avatar,
                 'social' =>"1",
-            ]);*/
+                ]);*/
 
 
-            $user->SocialProviders()->create(
-                ['provider_id'=>$socialUser->getId(),'provider'=>$provider,'avatar'=>$socialUser->getAvatar()]
-                );
+                $user->SocialProviders()->create(
+                    ['provider_id'=>$socialUser->getId(),'provider'=>$provider,'avatar'=>$socialUser->getAvatar()]
+                    );
 
-            \DB::table('users')
-            ->where('email', $socialUser->getEmail())
-            ->update(['perfil' => $socialUser->getAvatar()]);
-            
-            Auth::login($user,$socialProvider, true);  
-            return redirect('/admin/home');
+                \DB::table('users')
+                ->where('email', $socialUser->getEmail())
+                ->update(['perfil' => $socialUser->getAvatar()]);
+                
+                Auth::login($user,$socialProvider, true);  
+                return redirect('/');
+            }
+            else
+                $user = $socialProvider->user_id; 
+            $authUser = User::where('id', $user)->first();
+            Auth::login($authUser, true);  
+            return redirect('/');
         }
-        else
-            $user = $socialProvider->user_id; 
-        $authUser = User::where('id', $user)->first();
-        Auth::login($authUser, true);  
-        return redirect('/admin/home');
+
+
     }
-
-
-}

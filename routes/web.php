@@ -23,8 +23,30 @@ Route::get('/', function () {
 });
 
 
+/*Route::get('/administracion','AdminsController@index');// Validamos los datos de inicio de sesión.
+Route::post('/administracion/login', 'AdminsController@postLogin');*/
+
+
+
+	Route::GET('administracion','AdminsController@showLoginForm');                
+	Route::POST('administracion/login','AdminsController@login');         
+	Route::POST('admin_password/email','AdminAuth\ForgotPasswordController@sendResetLinkEmail');  
+	Route::GET('admin_password/reset','AdminAuth\ForgotPasswordController@showLinkRequestForm'); 
+	Route::POST('admin_password/reset','AdminAuth\ResetPasswordController@reset');            
+	Route::GET('admin_password/reset/{token}','AdminAuth\ResetPasswordController@showResetForm');  
+	Route::GET('admin_register','AdminAuth\RegisterController@showRegistrationForm');     
+	Route::POST('admin_register','AdminAuth\RegisterController@register'); 
+	Route::POST('admin_logout','AdminAuth\LoginController@logout');
+
+
+
+
+
+
+
 
 Route::group(['middleware' => ['auth','admin']], function () {
+
 	Route::get('/admin/', function (){return view('adminlte::home');	});
 	Route::get('/admin/home', function (){return view('adminlte::home');	});
 	Route::get('/admin/config','Admin\EmpressController@index');

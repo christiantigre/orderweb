@@ -54,3 +54,14 @@ ul>li>ul>li a:hover {
     color: #4F9B3F;/*#4F9B3F*/
     text-decoration:none;
 }
+
+.avatar {
+    /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 15%;
+    width: 15%;
+    /* los siguientes valores son independientes del tamaño del círculo */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
