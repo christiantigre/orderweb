@@ -18,7 +18,8 @@ Route::get('/page', function () {
 
 
 Route::get('/', function () {
-	return view('welcome');
+	/*return view('welcome');*/
+	return view('pagina/index');
 });
 
 

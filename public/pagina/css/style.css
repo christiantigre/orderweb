@@ -26,21 +26,24 @@
 
 /*
 1. General
-Print grafic #4e923e
+Print grafic 
+#4F9B3F
+#4F9B3F
+
 **********************************************************************/
  body {
     font-family:'Roboto', sans-serif;
-    color: #4e923e;/*#FFF*/
+    color: #4F9B3F;/*#FFF*/
     line-height:1.2em;
     font-size:17px;
     line-height:20px;
 }
 a {
-    color: #4e923e;/*#181A1C*/
+    color: #4F9B3F;/*#181A1C*/
     text-decoration: none;
 }
 a:hover {
-    color: #4e923e;/*#4e923e*/
+    color: #4F9B3F;/*#4F9B3F*/
     text-decoration:none;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -55,7 +58,7 @@ p {
     color: #fff;
 }
 .navbar {
-    background: #4e923e;/*#181A1C*/
+    background: #4F9B3F;/*#181A1C*/
     margin-bottom:0;
     min-height:70px;
 }
@@ -91,7 +94,7 @@ p {
     transition: border-color 1s ease;
 }
 .navbar .nav > li:hover> a, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-    border: 1px solid #4e923e;/*#4e923e*/
+    border: 1px solid #4F9B3F;/*#4F9B3F*/
     color: #fff;
     background-color: #181A1C;
     transition: border-color 1s ease;
@@ -115,7 +118,7 @@ p {
 }
 .navbar .btn-navbar:hover, .navbar .btn-navbar {
     border-radius:0;
-    background:#4e923e;
+    background:#4F9B3F;
     color: #000;
 }
 /******
@@ -220,20 +223,20 @@ p {
 }
 .button-sp, .button-sp:visited, .button-sp:focus {
     border:none;
-    background-color:#4e923e;
+    background-color:#4F9B3F;
     color:#181A1C;
 }
 .button-sp:hover, .button-sp:active {
     background-color:#181A1C;
-    color:#4e923e;
+    color:#4F9B3F;
 }
 .button-ps, .button-ps:visited, .button-ps:focus {
     border:none;
     background-color:#181A1C;
-    color:#4e923e;
+    color:#4F9B3F;
 }
 .button-ps:hover, .button-ps:active {
-    background-color:#4e923e;
+    background-color:#4F9B3F;
     color:#181A1C;
 }
 /*
@@ -284,7 +287,7 @@ p {
     z-index:4;
 }
 .thumbnail h3 {
-    color: #4e923e;
+    color: #4F9B3F;
     margin-top:10px;
     font-size:20px;
 }
@@ -330,7 +333,7 @@ p {
     padding:0;
     width:32px;
     height:32px;
-    color: #4e923e;
+    color: #4F9B3F;
 }
 .social li a:hover {
     color:#181A1C;
@@ -363,19 +366,19 @@ p {
     background:#181A1C;
 }
 .primary-section .triangle {
-    border-top: 40px solid #4e923e;
+    border-top: 40px solid #4F9B3F;
 }
 .primary-section .title {
     border-bottom: 1px solid #FFF;
 }
 .primary-section, .primary-section .title p, .primary-section h3 {
-    color: #4e923e;
+    color: #4F9B3F;
 }
 .primary-section h1 {
     color:#FFF;
 }
 .secondary-section {
-    background:#4e923e;
+    background:#4F9B3F;
 }
 .secondary-section .title {
     border-bottom: 1px solid #181A1C;
@@ -387,7 +390,7 @@ p {
 .third-section {
     padding-bottom: 70px;
     background: #181A1C url(../images/brand-bg.png) no-repeat center;
-    border-top:6px solid #4e923e;
+    border-top:6px solid #4F9B3F;
 }
 .third-section .container {
     padding-top:20px;
@@ -395,7 +398,7 @@ p {
 }
 .third-section .title {
     border-bottom: 1px solid #A1AAB7;
-    color: #4e923e;
+    color: #4F9B3F;
 }
 .sub-section {
     margin-top:30px;
@@ -439,7 +442,7 @@ p {
 .project-title {
     margin-top:15px;
     margin-bottom:15px;
-    border-bottom:1px solid #4e923e;
+    border-bottom:1px solid #4F9B3F;
 }
 .project-title h3 {
     float:left;
@@ -448,11 +451,11 @@ p {
     width:80%;
 }
 .project-title .close {
-    color: #4e923e;
+    color: #4F9B3F;
     margin-top:10px;
 }
 .project-info span, .project-title h3 {
-    color:#4e923e;
+    color:#4F9B3F;
 }
 .project-info {
     font-weight:100;
@@ -492,7 +495,7 @@ p {
     color:#fff;
 }
 .team .thumbnail .mask {
-    background: #4e923e;
+    background: #4F9B3F;
 }
 .team .thumbnail .mask h2 {
     margin-top:20%;
@@ -533,7 +536,7 @@ p {
 .skills li .bar {
     height:40px;
     position:absolute;
-    background-color: #4e923e;
+    background-color: #4F9B3F;
 }
 /*
 3.4 Clients
@@ -542,7 +545,7 @@ p {
     border:1px solid white;
 }
 .client-slider img:hover {
-    background-color:#4e923e;
+    background-color:#4F9B3F;
 }
 .client-nav {
     list-style:none;
@@ -556,7 +559,7 @@ p {
 .client-nav li a {
     display:inherit;
     padding:5px;
-    background:#4e923e;
+    background:#4F9B3F;
     border-radius:3px;
     width:20px;
     height:20px;
@@ -566,14 +569,14 @@ p {
 }
 .testimonial p {
     color:#181A1C;
-    background:#4e923e;
+    background:#4F9B3F;
     padding:15px;
     margin:0;
 }
 .testimonial .arrow {
     margin-left:10px;
     width:0;
-    border-top:10px solid #4e923e;
+    border-top:10px solid #4F9B3F;
     border-left: 20px outset transparent;
     border-right: 20px outset transparent;
 }
@@ -625,7 +628,7 @@ p {
     background-color:#181A1C;
     text-transform:uppercase;
     text-align: center;
-    color:#4e923e;
+    color:#4F9B3F;
     padding:40px 0px;
     font-size: 36px;
     margin-top:0px;
@@ -688,7 +691,7 @@ p {
 3.7 Contact
 ********************************************************************/
  .contact {
-    background: #4e923e;
+    background: #4F9B3F;
 }
 .contact h1, .contact h2, .contact h3, .contact h4, .contact h5, .contact h6, .contact .section .title > p, .contact .social > li > a {
     color: #181A1C;
@@ -776,7 +779,7 @@ p {
     font-size:17px;
 }
 .message-btn:hover {
-    background-color:#4e923e;
+    background-color:#4F9B3F;
 }
 .contact-info {
     text-align:center;
@@ -805,7 +808,7 @@ p {
 }
 
 .footer a{
-    color:#4e923e;
+    color:#4F9B3F;
 }
 
 .footer a:hover, .footer a:focus{
@@ -824,7 +827,7 @@ p {
     right:20px;
 	border:1px solid #fff;
     display:none;
-    background: #4e923e;
+    background: #4F9B3F;
 }
 .scrollup > a {
     position:relative;

@@ -60,7 +60,7 @@
               </span>
             </a>
             <ul class="treeview-menu">                      
-            <li><a href="{{ url('admin/config') }}">{{ trans('adminlte_lang::message.emp') }}</a></li>      
+              <li><a href="{{ url('admin/config') }}">{{ trans('adminlte_lang::message.emp') }}</a></li>      
               <li><a href="{{ Route('money.index') }}">{{ trans('adminlte_lang::message.money') }}</a></li>           
               <li><a href="{{ Route('pay.index') }}">{{ trans('adminlte_lang::message.pay') }}</a></li>              
             </ul>

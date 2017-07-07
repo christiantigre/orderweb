@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <!--
- * A Design by GraphBerry
- * Author: GraphBerry
- * Author URL: http://graphberry.com
- * License: http://graphberry.com/pages/license
+* A Design by GraphBerry
+* Author: GraphBerry
+* Author URL: http://graphberry.com
+* License: http://graphberry.com/pages/license
 -->
 <html lang="en">
-    
+
     <head>
         <meta charset=utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pluton Theme by BraphBerry.com</title>
+        <title>.: PrintGrafic :.</title>
         <!-- Load Roboto font -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- Load css styles -->
@@ -18,26 +18,37 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('pagina/css/bootstrap-responsive.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('pagina/css/style.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('pagina/css/pluton.css') }}" />
+        
+        
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        
+        
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/skins/all-skins.min.css') }}" />
         <!--[if IE 7]>
-            <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
-        <![endif]-->
+<link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
+<![endif]-->
         <link rel="stylesheet" type="text/css" href="{{ asset('pagina/css/jquery.cslider.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('pagina/css/jquery.bxslider.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('pagina/css/animate.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('pagina/css/menu.css') }}" />
         <!-- Fav and touch icons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('pagina/images/ico/apple-touch-icon-144.png') }}">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('pagina/images/ico/apple-touch-icon-114.png') }}">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('pagina/images/apple-touch-icon-72.png') }}">
         <link rel="apple-touch-icon-precomposed" href="{{ asset('pagina/images/ico/apple-touch-icon-57.png') }}">
         <link rel="shortcut icon" href="{{ asset('pagina/images/ico/favicon.ico') }}">
+        
     </head>
-    
+
     <body>
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
                     <a href="#" class="brand">
-                        <img src="{{ url('pagina/images/logo.png') }}" width="120" height="40" alt="Logo" />
+                        <img src="{{ url('img/web/textprintgrafic.png') }}" width="120" height="40" alt="Logo" />
                         <!-- This is website logo -->
                     </a>
                     <!-- Navigation button, visible on small resolution -->
@@ -47,19 +58,39 @@
                     <!-- Main navigation -->
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav" id="top-navigation">
-                            <li class="active"><a href="#home">Home</a></li>
-                            <li><a href="#service">Services</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#clients">Clients</a></li>
-                            <li><a href="#price">Price</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li class="active"><a href="#home">Inicio</a></li>
+                            <li><a href="#service">Demostraciones</a></li>
+                            <li><a href="#portfolio">Galeria</a></li>
+                            <li><a href="#about">Nosotros</a></li>
+                            <li><a href="#clients">Clientes</a></li>
+                            <li><a href="#contact">Contacto</a></li>   
+                            <li class="has-dropdown"><a href=""><span class="pull-right-container"><i class="fa fa-fw fa-user"></i></span>Cuenta</a>
+                                <ul id="sub-menu" class="sousMenu dropdown">
+                                    <li><a href="{{ url('/login') }}" class="tag-a"><span class="pull-right-container"><i class="fa fa-fw fa-lock"></i></span>Iniciar</a></li>
+                                    <li><a href="" class="tag-a"><span class="pull-right-container"><i class="fa fa-fw fa-user-plus"></i></span>Registrar</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <!-- End main navigation -->
                 </div>
             </div>
         </div>
+        <style> 
+            /*.sousMenu:hover ul
+            {
+            display:inherit;
+            }
+            .sousMenu ul
+            {
+            top: 40px;
+            display: none;
+            list-style-type: none;
+            border-radius: 0;  
+            margin-bottom: 30px;
+            }*/
+            
+        </style>
         <!-- Start home section -->
         <div id="home">
             <!-- Start cSlider -->
@@ -968,8 +999,8 @@
         <script async="" defer="" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=initializeMap"></script>
         <!-- css3-mediaqueries.js for IE8 or older -->
         <!--[if lt IE 9]>
-            <script src="js/respond.min.js"></script>
-        <![endif]-->
+<script src="js/respond.min.js"></script>
+<![endif]-->
         <script type="text/javascript" src="{{ url ('pagina/js/app.js') }}"></script>
     </body>
 </html>
