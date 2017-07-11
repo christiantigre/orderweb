@@ -18,29 +18,15 @@ Route::get('/page', function () {
 
 
 Route::get('/', function () {
-	/*return view('welcome');*/
 	return view('pagina/index');
 });
 
+	Route::get('/administrador', 'Auth\AdminLoginController@showLoginForm');
+	Route::get('/administracion', 'Auth\AdminLoginController@showLoginForm');
 
-/*Route::get('/administracion','AdminsController@index');// Validamos los datos de inicio de sesión.
-Route::post('/administracion/login', 'AdminsController@postLogin');*/
-
-
-
-	Route::GET('administracion','AdminsController@showLoginForm');                
-	Route::POST('administracion/login','AdminsController@login');         
-	Route::POST('admin_password/email','AdminAuth\ForgotPasswordController@sendResetLinkEmail');  
-	Route::GET('admin_password/reset','AdminAuth\ForgotPasswordController@showLinkRequestForm'); 
-	Route::POST('admin_password/reset','AdminAuth\ResetPasswordController@reset');            
-	Route::GET('admin_password/reset/{token}','AdminAuth\ResetPasswordController@showResetForm');  
-	Route::GET('admin_register','AdminAuth\RegisterController@showRegistrationForm');     
-	Route::POST('admin_register','AdminAuth\RegisterController@register'); 
-	Route::POST('admin_logout','AdminAuth\LoginController@logout');
-
-
-
-
+	Route::GET('admin/login','Auth\AdminLoginController@showLoginForm')->name('admin.login');                
+	Route::post('admin/login','Auth\AdminLoginController@login')->name('dashboard');
+//Route::get('administracion','AdminController@index');          
 
 
 

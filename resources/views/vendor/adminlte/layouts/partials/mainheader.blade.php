@@ -34,7 +34,7 @@
                                     <a href="#">
                                         <div class="pull-left">
                                             <!-- User Image -->
-                                            <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image"/>
+                                            <img src="{{ Gravatar::get(Auth::user()->email) }}" class="img-circle" alt="User Image"/>
                                         </div>
                                         <!-- Message title and timestamp -->
                                         <h4>
@@ -118,7 +118,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
                             @if( (Auth::user()->perfil) == "")
-                            <img src="{{ Gravatar::get($user->email) }}" class="user-image" alt="User Image"/>
+                            <img src="{{ Gravatar::get(Auth::user()->email) }}" class="user-image" alt="User Image"/>
                             @else
                             <img src="{{ Auth::user()->perfil }}" class="user-image" alt="User Image"/>
                             @endif
@@ -131,10 +131,10 @@
                         <center>
 
                             @if( (Auth::user()->perfil) == "")
-                            <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="{{ Gravatar::get($user->email) }}-User Image" />
+                            <img src="{{ Gravatar::get(Auth::user()->email) }}" class="img-circle" alt="{{ Gravatar::get(Auth::user()->email) }}" />
                             @else
                             <li class="user-header">
-                                <img src="{{ Auth::user()->perfil }}" style="height: 50%; width: 50%;" class="img-circle" alt="{{ Gravatar::get($user->email) }}-User Image" />
+                                <img src="{{ Auth::user()->perfil }}" style="height: 50%; width: 50%;" class="img-circle" alt="{{ Gravatar::get(Auth::user()->email) }}" />
                                 @endif
                         </center>
                                 

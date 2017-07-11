@@ -11,6 +11,7 @@ Log in
             <div class="login-logo">
                 <a href="{{ url('/home') }}"><b>Administración</b></a>
             </div><!-- /.login-logo -->
+            @include('adminlte::errors.info')
 
             @if (count($errors) > 0)
             <div class="alert alert-danger">
@@ -27,14 +28,14 @@ Log in
                 <p class="login-box-msg"> {{ trans('adminlte_lang::message.siginsession') }} </p>
 
 
-                {{ Form::open(array('url' => '/administracion/login')) }}
+                {{ Form::open(array('url' => 'admin/login')) }}
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <login-input-field
                 name="{{ config('auth.providers.users.field','email') }}"
                 domain="{{ config('auth.defaults.domain','') }}"
                 ></login-input-field>
                 <div class="form-group has-feedback">
-                    <input type="email" class="form-control" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email"/>
+                    <input id="email" type="email" placeholder="{{ trans('adminlte_lang::message.email') }}" class="form-control" name="email" value="{{ old('email') }}" autocomplete="off" required autofocus>
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
