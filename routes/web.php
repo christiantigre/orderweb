@@ -76,6 +76,12 @@ Route::group(['middleware' => ['auth','admin']], function () {
 	//Slider//
 	Route::resource('/admin/slider','Admin\SliderController');
 	Route::get('admin/listslider','Admin\SliderController@listall');
+	//desmostration//
+	Route::resource('/admin/demostrationes','Admin\DemostrationController');
+	Route::get('admin/listsdemo','Admin\DemostrationController@listall');
+	//tittles//
+	Route::resource('/admin/tittles','Admin\tittleController');
+	Route::get('admin/listtittle','Admin\tittleController@listall');
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 });

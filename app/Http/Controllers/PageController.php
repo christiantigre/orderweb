@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Slider;
+use App\Demostraction;
+use App\tittles;
 
 class PageController extends Controller
 {
@@ -15,7 +17,21 @@ class PageController extends Controller
     public function index()
     {
         $slider = Slider::orderBy('id','DESC')->get();
-        return view('pagina/index',compact('slider'));
+        $demos = Demostraction::orderBy('id','DESC')->get();
+        $tittlesslides1 = tittles::orderBy('id','DESC')->where('id','1')->get();
+        $tittlesslides2 = tittles::orderBy('id','DESC')->where('id','2')->get();
+        $tittlesslides3 = tittles::orderBy('id','DESC')->where('id','3')->get();
+        $tittlesslides4 = tittles::orderBy('id','DESC')->where('id','4')->get();
+        $tittlesslides5 = tittles::orderBy('id','DESC')->where('id','5')->get();
+        return view('pagina/index',compact(
+            'slider'
+            ,'demos'
+            ,'tittlesslides1'
+            ,'tittlesslides2'
+            ,'tittlesslides3'
+            ,'tittlesslides4'
+            ,'tittlesslides5'
+            ));
     }
 
     /**

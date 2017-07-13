@@ -12,6 +12,16 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'password' => '$2y$10$QW8K/dMO0LYUdwDJVm0JiOha5RWgUZpMipsAcLtapVOWd.PfgWAFG',
+            'perfil' => 'https://lh3.googleusercontent.com/-7mZcRgQsJZU/AAAAAAAAAAI/AAAAAAAAACo/lskuFvq2iQQ/photo.jpg?sz=50',
+            'social' => '1',
+            'admin' => '1',
+            'active' => '1',
+        ]);
+
+        DB::table('users')->insert([
             'name' => 'ChristianT',
             'email' => 'andrescondo17@gmail.com',
             'password' => crypt('secret','andrescondo17@gmail.com'),

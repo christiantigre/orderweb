@@ -19,7 +19,6 @@ class CantonController extends Controller
     public function index()
     {
         return view('adminlte::layouts.canton.index', compact('cantones'));
-        //
     }
 
     /**

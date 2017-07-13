@@ -4,15 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Slider extends Model
+class Demostraction extends Model
 {
-    protected $fillable = [
+	protected $fillable = [
 	'tittle',
-	'subtittle',
 	'paragraph',
-	'link',
-	'tittle_link',
 	'img',
-	'status',
+	'link',
+	'sttaus',
 	];
 }

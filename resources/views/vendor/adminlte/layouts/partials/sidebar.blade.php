@@ -61,6 +61,11 @@
             </a>
             <ul class="treeview-menu">                      
               <li><a href="{{ url('admin/slider') }}">{{ trans('adminlte_lang::message.slider') }}</a></li>      
+              <li><a href="{{ url('admin/demostrationes') }}">{{ trans('adminlte_lang::message.demo') }}</a></li>      
+              <li><a href="{{ url('admin/slider') }}">{{ trans('adminlte_lang::message.galery') }}</a></li>      
+              <li><a href="{{ url('admin/slider') }}">{{ trans('adminlte_lang::message.nos') }}</a></li>      
+              <li><a href="{{ url('admin/slider') }}">{{ trans('adminlte_lang::message.client') }}</a></li>      
+              <li><a href="{{ url('admin/tittles') }}">{{ trans('adminlte_lang::message.tittles') }}</a></li>      
               <li><a href="{{ url('admin/config') }}">{{ trans('adminlte_lang::message.emp') }}</a></li>      
               <li><a href="{{ Route('money.index') }}">{{ trans('adminlte_lang::message.money') }}</a></li>           
               <li><a href="{{ Route('pay.index') }}">{{ trans('adminlte_lang::message.pay') }}</a></li>              

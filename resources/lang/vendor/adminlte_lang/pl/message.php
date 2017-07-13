@@ -157,5 +157,10 @@ return [
     'clients'                   => 'Clientes',
     'employees'                   => 'Empleados',
     'slider'                   => 'Slider',
+    'demo'                   => 'Demostraciones',
+    'galery'                   => 'Galeria',
+    'nos'                   => 'Nosotros',
+    'client'                   => 'Clientes',
+    'tittles'                   => 'Titulos',
     
 ];
