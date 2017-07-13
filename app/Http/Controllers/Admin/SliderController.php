@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Slider;
+use Input;
+use Image;
+use Session;
 
 class SliderController extends Controller
 {
@@ -14,7 +18,13 @@ class SliderController extends Controller
      */
     public function index()
     {
-        //
+        return view('adminlte::layouts.slider.index');
+    }
+
+    public function listall()
+    {
+        $sliders = Slider::orderBy('id','DESC')->get();
+        return view('adminlte::layouts.slider.list-sliders', compact('sliders'));
     }
 
     /**
@@ -24,7 +34,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        //
+        return view('adminlte::layouts.slider.create');
     }
 
     /**
@@ -35,7 +45,28 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $file = Input::file('img');
+        $random = str_random(10);
+        $nombre = $random.' - '.$file->getClientOriginalName();
+        $path = public_path('uploads/slider/'.$nombre);
+        $url = '/uploads/slider/'.$nombre;
+        $image = Image::make($file->getRealPath());
+        $image->resize(300, 200);
+        if($image->save($path)){
+            $slider = new Slider;
+            $slider->tittle = $request->tittle;
+            $slider->subtittle = $request->subtittle;
+            $slider->paragraph = $request->paragraph;
+            $slider->link = $request->link;
+            $slider->tittle_link = $request->tittle_link;
+            $slider->img = 'uploads/slider/'.$nombre;
+            $slider->save();
+            Session::flash('success', $request->tittle.' Registrado correctamente');
+
+            return redirect('admin/slider');
+        }else{
+            return 'No Guardado';
+        }
     }
 
     /**
@@ -46,7 +77,8 @@ class SliderController extends Controller
      */
     public function show($id)
     {
-        //
+        $slider = Slider::find($id);
+        return view('adminlte::layouts.slider.show',compact('slider'));
     }
 
     /**
@@ -57,7 +89,8 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $slider = Slider::FindOrFail($id);
+        return view('adminlte::layouts.slider.edit', array('slider'=>$slider));//
     }
 
     /**
@@ -69,7 +102,40 @@ class SliderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $file = Input::file('img');
+        if (!empty($file)) {
+            $random = str_random(10);
+            $nombre = $random.' - '.$file->getClientOriginalName();
+            $path = public_path('uploads/slider/'.$nombre);
+            $url = '/uploads/slider/'.$nombre;
+            $image = Image::make($file->getRealPath());
+            $image->resize(300, 200);
+            if($image->save($path)){
+                $slider = Slider::findOrFail($id);            
+                $slider->tittle = $request->tittle;
+                $slider->subtittle = $request->subtittle;
+                $slider->paragraph = $request->paragraph;
+                $slider->link = $request->link;
+                $slider->tittle_link = $request->tittle_link;
+                $slider->img = 'uploads/slider/'.$nombre;
+                $slider->save();
+                Session::flash('success', $request->tittle.' Actualizado correctamente');
+                return redirect('admin/slider'); 
+            }else{
+                Session::flash('success', $request->tittle.' No se pudo subir laimagen');
+                return redirect('admin/slider'); 
+            }           
+        }else{        
+            $slider = Slider::findOrFail($id);
+            $slider->tittle = $request->tittle;
+            $slider->subtittle = $request->subtittle;
+            $slider->paragraph = $request->paragraph;
+            $slider->link = $request->link;
+            $slider->tittle_link = $request->tittle_link;
+            $slider->save();
+            Session::flash('success', $request->tittle.' Actualizado correctamente');
+            return redirect('admin/slider');
+        }
     }
 
     /**
@@ -80,6 +146,9 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $slider = Slider::find($id);
+        $slider->delete();
+        Session::flash('warning', ' '.$slider->tittle.' eliminado');
+        return back()->with('warning',' '.$slider->tittle.' eliminado'); 
     }
 }

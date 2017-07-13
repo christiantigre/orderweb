@@ -17,9 +17,7 @@ Route::get('/page', function () {
 });
 
 
-Route::get('/', function () {
-	return view('pagina/index');
-});
+Route::get('/', 'PageController@index');
 
 	Route::get('/administrador', 'Auth\AdminLoginController@showLoginForm');
 	Route::get('/administracion', 'Auth\AdminLoginController@showLoginForm');
@@ -75,6 +73,9 @@ Route::group(['middleware' => ['auth','admin']], function () {
 	//Pay Methods//
 	Route::resource('/admin/pay','Admin\PayController');
 	Route::get('admin/listpay','Admin\PayController@listall');
+	//Slider//
+	Route::resource('/admin/slider','Admin\SliderController');
+	Route::get('admin/listslider','Admin\SliderController@listall');
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 });

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Slider;
 
 class PageController extends Controller
 {
@@ -13,7 +14,8 @@ class PageController extends Controller
      */
     public function index()
     {
-        //
+        $slider = Slider::orderBy('id','DESC')->get();
+        return view('pagina/index',compact('slider'));
     }
 
     /**

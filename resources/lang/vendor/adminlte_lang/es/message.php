@@ -154,4 +154,6 @@ return [
     'sales'                   => 'Ventas',
     'clients'                   => 'Clientes',
     'employees'                   => 'Empleados',
+    'slider'                   => 'Slider',
+    
 ];
