@@ -13,7 +13,7 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Category::class, 30)->create();
+        factory(Category::class, 10)->create();
         //DB::table('categories')->insert([
     	//	'name' => 'Banners',
     	//	]);

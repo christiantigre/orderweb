@@ -37,13 +37,14 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                    @include('adminlte::errors.info')
+                      @include('adminlte::errors.info')
                       <table id="example1" class="table table-bordered table-striped">
                         <thead>
                           <tr>
                             <th>#</th>
                             <th>Categoria</th>
                             <th>Descripción</th>
+                            <th>thumbail</th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -65,6 +66,15 @@
                               </strong>
                             </th>
                             <th>
+                              <strong>
+                              @if(($category->thumb)=='1')
+                                Visible
+                                @else
+                                No visible
+                                @endif
+                              </strong>
+                            </th>
+                            <th>
                               <a href="{{ Route('Categories.show', $category->id) }}" type="button" class="btn btn-block btn-primary btn-xs">Ver</a>
                             </th>
                             <th>
@@ -72,38 +82,38 @@
                             </th>
                             <th>
                               <form action="{{ route('Categories.destroy',$category->id) }}" method="POST">
-                              {{ csrf_field() }}
-                              <input type="hidden" name="_method" value="DELETE">
-                              <button type="submit" onclick="return confirm('Esta seguro que desea eliminar el registro?')" class="btn btn-block btn-danger btn-xs">Eliminar</button>
+                                {{ csrf_field() }}
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" onclick="return confirm('Esta seguro que desea eliminar el registro?')" class="btn btn-block btn-danger btn-xs">Eliminar</button>
                                 <!--<a href="{{ Route('Categories.show', $category->id) }}" type="button" class="btn btn-block btn-danger btn-xs">Eliminar-->
-                                </a>
-                              </form>
-                            </th>
-                          </tr>
-                          <?Php      $i++;          ?>
-                          @endforeach
-                        </tbody>
-                        <tfoot>
-                          <tr>
-                            <th>Categoria</th>
-                            <th></th>
-                            <th></th>
-                          </tr>
-                        </tfoot>
-                      </table>
-                    </div>
-                    <!-- /.box-body -->
+                              </a>
+                            </form>
+                          </th>
+                        </tr>
+                        <?Php      $i++;          ?>
+                        @endforeach
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>Categoria</th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                      </tfoot>
+                    </table>
                   </div>
-                  <!-- /.box -->
+                  <!-- /.box-body -->
                 </div>
-                <!-- /.col -->
+                <!-- /.box -->
               </div>
-              <!-- /.row -->
-            </section>
-            <!-- /.content -->
-          </div>
-          <!-- /.box -->
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </section>
+          <!-- /.content -->
         </div>
+        <!-- /.box -->
       </div>
     </div>
-    @endsection
+  </div>
+  @endsection

@@ -10,6 +10,7 @@ class Category extends Model
   'id',
   'name',
   'des',
+  'thumb',
   ];
 
   protected $rules = [
@@ -19,6 +20,11 @@ class Category extends Model
   public function subcategories()
   {
     return $this->hasMany('App\Subcategory', 'id');
+  }
+
+  public function galerry()
+  {
+    return $this->hasMany('App\Gallery', 'id');
   }
   
 

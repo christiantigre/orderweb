@@ -17,6 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->string('name',15);
             $table->string('des',191);
+            $table->boolean('thumb')->default(1);
             $table->timestamps();
         });
     }

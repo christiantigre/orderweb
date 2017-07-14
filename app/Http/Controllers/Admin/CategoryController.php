@@ -32,6 +32,7 @@ class CategoryController extends Controller
     	$category = new Category;
         $category->name = $request->name;
         $category->des = $request->des;
+        $category->thumb = $request->thumb;
         $category->save();
         return redirect('admin/Categories')->with('info', 'Producto registrado correctamente');
     }
@@ -41,6 +42,7 @@ class CategoryController extends Controller
         $category = Category::find($id);
         $category->name = $request->name;
         $category->des = $request->des;
+        $category->thumb = $request->thumb;        
         $category->save();
         return redirect('admin/Categories')->with('info', 'Producto actualizado correctamente');    	
     }    

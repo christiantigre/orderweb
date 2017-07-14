@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Slider;
 use App\Demostraction;
 use App\tittles;
+use App\Gallery;
+use App\Category;
 
 class PageController extends Controller
 {
@@ -23,6 +25,9 @@ class PageController extends Controller
         $tittlesslides3 = tittles::orderBy('id','DESC')->where('id','3')->get();
         $tittlesslides4 = tittles::orderBy('id','DESC')->where('id','4')->get();
         $tittlesslides5 = tittles::orderBy('id','DESC')->where('id','5')->get();
+        $thumbails = Gallery::orderBy('id','DESC')->where('status','1')->get();
+        $categories = Category::orderBy('id','DESC')->where('thumb','1')->get();
+        
         return view('pagina/index',compact(
             'slider'
             ,'demos'
@@ -31,6 +36,8 @@ class PageController extends Controller
             ,'tittlesslides3'
             ,'tittlesslides4'
             ,'tittlesslides5'
+            ,'thumbails'
+            ,'categories'
             ));
     }
 
