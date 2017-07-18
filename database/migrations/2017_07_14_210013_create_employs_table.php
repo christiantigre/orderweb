@@ -24,7 +24,13 @@ class CreateEmploysTable extends Migration
             $table->string('email',25)->nullable();
             $table->date('date_nac')->nullable();
             $table->string('perfil')->nullable();
+            $table->string('profetion',35)->nullable();
+            $table->string('description',100)->nullable();
+            $table->string('fb',100)->nullable();
+            $table->string('twi',100)->nullable();
+            $table->string('in',100)->nullable();
             $table->boolean('status')->default(1);      
+            $table->boolean('web')->default(1);      
             $table->integer('id_country')->unsigned();
             $table->foreign('id_country')->references('id')->on('countries');
             $table->integer('id_province')->unsigned();

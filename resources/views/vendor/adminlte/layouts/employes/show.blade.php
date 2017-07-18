@@ -59,6 +59,21 @@
                     </strong></h4>
                   </div>
                   <div class="box-body">                      
+                    <h4>Profesión : <strong>
+                      {{ $employ->profetion }}
+                    </strong></h4>
+                  </div>
+                  <div class="box-body">                      
+                    <h4>Profesión : <strong>
+                      {{ $employ->description }}
+                    </strong></h4>
+                  </div>
+                  <div class="box-body">                      
+                    <h4>Facebook : <strong><a href="{{ $employ->fb }}">{{ $employ->fb }}</a></strong></h4>
+                    <h4>Twiter : <strong><a href="{{ $employ->twi }}">{{ $employ->twi }}</a></strong></h4>
+                    <h4>LikeIn : <strong><a href="{{ $employ->in }}">{{ $employ->in }}</a></strong></h4>
+                  </div>
+                  <div class="box-body">                      
                   <h4>Estado : <strong>
                     @if(($employ->status)=='1')
                     Activado

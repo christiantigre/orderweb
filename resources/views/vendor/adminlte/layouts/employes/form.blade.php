@@ -109,6 +109,53 @@
 		</select>
 	</div>	
 </div>
+
+<div class="form-group">
+	{!! Form::label('web','Web',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		<select name="web" class="form-control">
+			<option value="1">Visible</option>
+			<option value="0">Oculto</option>
+		</select>
+	</div>	
+</div>
+
+<div class="form-group">
+	{!! Form::label('profesion','Profesión',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::text('profetion',null,['class'=>'form-control','autofocus'=>'autofocus','autocomplete'=>'off','placeholder'=>'Ingrese profesión ...']) !!}
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('descripcion','Descripción',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::textarea('description',null,['class'=>'form-control', 'rows' => 2, 'cols' => 40,'autofocus'=>'autofocus','autocomplete'=>'off']) !!}
+
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('fb','Facebook',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::text('fb',null,['class'=>'form-control','autofocus'=>'autofocus','autocomplete'=>'off','placeholder'=>'Acceso a perfil facebook ...']) !!}
+	</div>
+</div>
+<div class="form-group">
+	{!! Form::label('twiter','Twiter',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::text('twi',null,['class'=>'form-control','autofocus'=>'autofocus','autocomplete'=>'off','placeholder'=>'Acceso a perfil twiter ...']) !!}
+	</div>
+</div>
+<div class="form-group">
+	{!! Form::label('in','LiKeIn',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::text('in',null,['class'=>'form-control','autofocus'=>'autofocus','autocomplete'=>'off','placeholder'=>'Acceso a perfil LiKeIn ...']) !!}
+	</div>
+</div>
+
+
+
 <script>
 	
 	$(function(){

@@ -90,11 +90,17 @@ class EmployeController extends Controller
                 $employ->date_nac = $fecha_nac;
                 $employ->perfil = 'uploads/avatars/'.$nombre;
                 $employ->status = $request->status;
+                $employ->web = $request->web;
                 $employ->id_country = $request->id_country;
                 $employ->id_province = $request->id_province;
                 $employ->id_canton = $request->id_canton;
                 $employ->id_parroquias = $request->id_parroquias;
                 $employ->id_departments = $request->id_department;
+                $employ->profetion = $request->profetion;
+                $employ->description = $request->description;
+                $employ->fb = $request->fb;
+                $employ->twi = $request->twi;
+                $employ->in = $request->in;
                 $employ->save();
                 Session::flash('success', $request->name.' Registrado correctamente');
 
@@ -180,12 +186,18 @@ class EmployeController extends Controller
                 $employ->email = $request->email;
                 $employ->date_nac = $fecha_nac;
                 $employ->perfil = 'uploads/avatars/'.$nombre;
+                $employ->web = $request->web;
                 $employ->status = $request->status;
                 $employ->id_country = $request->id_country;
                 $employ->id_province = $request->id_province;
                 $employ->id_canton = $request->id_canton;
                 $employ->id_parroquias = $request->id_parroquias;
                 $employ->id_departments = $request->id_department;
+                $employ->profetion = $request->profetion;
+                $employ->description = $request->description;
+                $employ->fb = $request->fb;
+                $employ->twi = $request->twi;
+                $employ->in = $request->in;
                 $employ->save();
                 Session::flash('success', $request->name.' Registrado correctamente');
 
@@ -204,12 +216,18 @@ class EmployeController extends Controller
             $employ->phone = $request->phone;
             $employ->email = $request->email;
             $employ->date_nac = $fecha_nac;
+            $employ->web = $request->web;
             $employ->status = $request->status;
             $employ->id_country = $request->id_country;
             $employ->id_province = $request->id_province;
             $employ->id_canton = $request->id_canton;
             $employ->id_parroquias = $request->id_parroquias;
             $employ->id_departments = $request->id_department;
+            $employ->profetion = $request->profetion;
+            $employ->description = $request->description;
+            $employ->fb = $request->fb;
+            $employ->twi = $request->twi;
+            $employ->in = $request->in;
             $employ->save();
             Session::flash('success', $request->name.' Actualizado correctamente');
             return redirect('admin/employees');

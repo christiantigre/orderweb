@@ -161,6 +161,7 @@ return [
     'client'                   => 'Clientes',
     'tittles'                   => 'Titulos',
     'zone'                   => 'Departamentos',
+    'work'                   => 'Trabajos',
 
 
 

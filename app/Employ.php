@@ -22,7 +22,13 @@ class Employ extends Model
 	'id_province',
 	'id_canton',
 	'id_parroquias',
-	'id_departments'
+	'id_departments',
+	'web',
+	'profetion',
+	'description',
+	'fb',
+	'twi',
+	'in',
 	];
 
 	public function country()

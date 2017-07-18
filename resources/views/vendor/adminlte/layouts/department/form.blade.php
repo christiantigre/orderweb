@@ -14,3 +14,13 @@
 		</select>
 	</div>	
 </div>
+
+<div class="form-group">
+	{!! Form::label('web','Web',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		<select name="web" class="form-control">
+			<option value="1">Mostrar</option>
+			<option value="0">Oculto</option>
+		</select>
+	</div>	
+</div>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTittlesTable extends Migration
+class CreateWorksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateTittlesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tittles', function (Blueprint $table) {
+        Schema::create('works', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tittle')->nullable();
-            $table->string('paragraph',255)->nullable();
+            $table->string('work',25)->nullable();            
+            $table->string('porcentaje',3)->nullable();            
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateTittlesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tittles');
+        Schema::dropIfExists('works');
     }
 }

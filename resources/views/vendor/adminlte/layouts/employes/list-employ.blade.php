@@ -9,6 +9,7 @@
 			<th>Origen</th>
 			<th>Foto</th>
 			<th>Estado</th>
+			<th>Web</th>
 			<th>Departamento</th>
 			<th></th>
 			<th></th>
@@ -61,6 +62,15 @@
 			</th>
 			<th>
 				<strong>
+					@if(($employ->web)=='1')
+					Visible
+					@else
+					Oculto
+					@endif
+				</strong>
+			</th>
+			<th>
+				<strong>
 					{{ $employ->department->department }}
 				</strong>
 			</th>
@@ -91,6 +101,7 @@
 			<th>Origen</th>
 			<th>Foto</th>
 			<th>Estado</th>
+			<th>Web</th>
 			<th>Departamento</th>
 			<th></th>
 			<th></th>
