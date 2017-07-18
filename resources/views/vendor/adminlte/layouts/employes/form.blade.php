@@ -1,0 +1,172 @@
+<div class="form-group">
+	{!! Form::label('name','Nombres',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::text('name',null,['class'=>'form-control','autocomplete'=>'off','autofocus'=>'autofocus','placeholder'=>'Ingrese nombres ...']) !!}
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('apellido','Apellidos',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::text('lastname',null,['class'=>'form-control','autocomplete'=>'off','autofocus'=>'autofocus','placeholder'=>'Ingrese apellidos ...']) !!}
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('ci','DNI',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::text('ci',null,['class'=>'form-control','autofocus'=>'autofocus','autocomplete'=>'off','placeholder'=>'Identificación de personal ...']) !!}
+
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('direccion','Dirección',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::text('address',null,['class'=>'form-control','autofocus'=>'autofocus','autocomplete'=>'off','placeholder'=>'Ingrese la dirección ...']) !!}
+
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('celular','Celular',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::text('cel',null,['class'=>'form-control','autofocus'=>'autofocus','autocomplete'=>'off','placeholder'=>'Ingrese numero de celular ...']) !!}
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('telefono','Telefono',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::text('phone',null,['class'=>'form-control','autofocus'=>'autofocus','autocomplete'=>'off','placeholder'=>'Ingrese numero de telefono ...']) !!}
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('corrreo','Correo',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::text('email',null,['class'=>'form-control','autofocus'=>'autofocus','autocomplete'=>'off','placeholder'=>'Ingrese correo electronico ...']) !!}
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('fechanac','F. nacimiento',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		<div class="input-group date">
+			<div class="input-group-addon">
+				<i class="fa fa-calendar"></i>
+			</div>
+			{!! Form::text('date_nac',null,['id'=>'datepicker','class'=>'form-control','autofocus'=>'autofocus','autocomplete'=>'off','placeholder'=>'Ingrese fecha de nacimiento ...']) !!}
+		</div>
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('tag','Etiqueta',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::select('id_department', $departments, null,['class'=>'form-control','autofocus'=>'autofocus'])    !!}
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('pais','Pais',['id'=>'pais','placeholder'=>'Selecciona','class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::select('id_country', $countries, null,['placeholder'=>'Selecciona','id'=>'id_country','class'=>'form-control','autofocus'=>'autofocus'])    !!}
+	</div>
+</div>
+<div class="form-group">
+	{!! Form::label('pronincia','Provincia',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::select('id_province', $provinces, null,['id'=>'provincia','placeholder'=>'Selecciona','class'=>'form-control','autofocus'=>'autofocus'])    !!}
+	</div>
+</div>
+<div class="form-group">
+	{!! Form::label('canton','Canton',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::select('id_canton', $cantones, null,['id'=>'canton','placeholder'=>'Selecciona','class'=>'form-control','autofocus'=>'autofocus'])    !!}
+	</div>
+</div>
+<div class="form-group">
+	{!! Form::label('parroquia','Parroquia',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		{!! Form::select('id_parroquias', $parroquias, null,['id'=>'parroquia','placeholder'=>'Selecciona','class'=>'form-control','autofocus'=>'autofocus'])    !!}
+	</div>
+</div>
+
+<div class="form-group">
+	{!! form::label('imagen','Foto',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		<input type="file" name="img" id="img" accept="image/*"  class="form-control"/>
+	</div>
+</div>
+
+<div class="form-group">
+	{!! Form::label('estado','Estado',['class'=>'col-sm-2 control-label']) !!}
+	<div class="col-sm-10">
+		<select name="status" class="form-control">
+			<option value="1">Activado</option>
+			<option value="0">Desactivado</option>
+		</select>
+	</div>	
+</div>
+<script>
+	
+	$(function(){
+		$('#id_country').on('change', onSelectCountryChange);
+	});
+
+	function onSelectCountryChange(){
+		var id_country = $(this).val();
+		if (! id_country) 
+			$('#provincia').html('<option value="1">SELECCIONA PROVINCIA</option>');
+
+		$.get('/api/located/'+id_country+'/provincias', function(data){
+			$("#provincia").empty();
+			var html_select = '<option value="1">SELECCIONA PROVINCIA</option>';
+			for(var i=0; i<data.length; ++i)
+				html_select +='<option value="'+data[i].id+'">'+data[i].province+'</option>';
+					//console.log(data[i]);
+					//console.log(html_select);
+					$('#provincia').html(html_select);
+				});
+
+	}
+
+	$(function(){
+		$('#provincia').on('change', onSelectProvinceChange);
+	});
+
+	function onSelectProvinceChange(){
+		var id_country = $(this).val();
+		if (! id_country) 
+			$('#canton').html('<option value="1">SELECCIONA CANTON</option>');
+
+		$.get('/api/located/'+id_country+'/canton', function(data){
+			$("#canton").empty();
+			var html_select = '<option value="1">SELECCIONA CANTON</option>';
+			for(var i=0; i<data.length; ++i)
+				html_select +='<option value="'+data[i].id+'">'+data[i].canton+'</option>';
+					$('#canton').html(html_select);
+				});
+
+	}
+
+	$(function(){
+		$('#canton').on('change', onSelectCantonChange);
+	});
+
+	function onSelectCantonChange(){
+		var id_country = $(this).val();
+		if (! id_country) 
+			$('#parroquia').html('<option value="1">SELECCIONA PARROQUIA</option>');
+
+		$.get('/api/located/'+id_country+'/parroquia', function(data){
+			$("#parroquia").empty();
+			var html_select = '<option value="1">SELECCIONA PARROQUIA</option>';
+			for(var i=0; i<data.length; ++i)
+				html_select +='<option value="'+data[i].id+'">'+data[i].parroquia+'</option>';
+					$('#parroquia').html(html_select);
+				});
+
+	}
+</script>

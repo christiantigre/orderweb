@@ -19,12 +19,13 @@ Route::get('/page', function () {
 
 Route::get('/', 'PageController@index');
 
-	Route::get('/administrador', 'Auth\AdminLoginController@showLoginForm');
-	Route::get('/administracion', 'Auth\AdminLoginController@showLoginForm');
+Route::get('/administrador', 'Auth\AdminLoginController@showLoginForm');
+Route::get('/administracion', 'Auth\AdminLoginController@showLoginForm');
 
-	Route::GET('admin/login','Auth\AdminLoginController@showLoginForm')->name('admin.login');                
-	Route::post('admin/login','Auth\AdminLoginController@login')->name('dashboard');
+Route::GET('admin/login','Auth\AdminLoginController@showLoginForm')->name('admin.login');                
+Route::post('admin/login','Auth\AdminLoginController@login')->name('dashboard');
 //Route::get('administracion','AdminController@index');          
+
 
 
 
@@ -85,6 +86,13 @@ Route::group(['middleware' => ['auth','admin']], function () {
 	//Gallery//
 	Route::resource('/admin/galleries','Admin\GalleryController');
 	Route::get('admin/listgallery','Admin\GalleryController@listall');
+	//Employees//
+	Route::resource('/admin/employees','Admin\EmployeController');
+	Route::get('admin/listemploy','Admin\EmployeController@listall');
+	//Employees//
+	Route::resource('/admin/department','Admin\DepartmentController');
+	Route::get('admin/listzones','Admin\DepartmentController@listall');
+
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 });

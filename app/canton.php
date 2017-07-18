@@ -22,8 +22,12 @@ class canton extends Model
 	}
 
 	public function parroquies()
-  {
-    return $this->hasMany('App\parroquia', 'id');
-  }
+	{
+		return $this->hasMany('App\parroquia', 'id');
+	}
+
+	public function employe(){
+		return $this->hasMany('App\Employ','id');
+	}
 
 }

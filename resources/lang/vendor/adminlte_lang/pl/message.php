@@ -162,5 +162,6 @@ return [
     'nos'                   => 'Nosotros',
     'client'                   => 'Clientes',
     'tittles'                   => 'Titulos',
+    'zone'                   => 'Departamentos',
     
 ];

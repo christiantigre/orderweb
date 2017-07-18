@@ -22,10 +22,10 @@ class GalleryTableSeeder extends Seeder
             'link'=>'www.webpage.com',
             'paragraph'=>'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto',
             'img'=>'uploads/gallery/71trTzEamm - web4.png',
-            'id_categorie'=>'1',
+            'id_categorie'=>10,
             'status'=>1,
             'created_at'=>NULL,
-            'updated_at'=>'2017-07-14 21:30:31'
+            'updated_at'=>'2017-07-14 23:25:18'
             ] );
 
         
@@ -40,10 +40,10 @@ class GalleryTableSeeder extends Seeder
             'link'=>'www.webpage.com',
             'paragraph'=>'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto',
             'img'=>'uploads/gallery/98IbLh5ubf - web3.jpg',
-            'id_categorie'=>'1',
+            'id_categorie'=>10,
             'status'=>1,
             'created_at'=>NULL,
-            'updated_at'=>'2017-07-14 21:30:08'
+            'updated_at'=>'2017-07-14 23:24:56'
             ] );
 
         
@@ -58,10 +58,10 @@ class GalleryTableSeeder extends Seeder
             'link'=>'www.webpage.com',
             'paragraph'=>'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto',
             'img'=>'uploads/gallery/y3jUXySQyC - identity4.jpg',
-            'id_categorie'=>'1',
+            'id_categorie'=>8,
             'status'=>1,
             'created_at'=>NULL,
-            'updated_at'=>'2017-07-14 21:38:49'
+            'updated_at'=>'2017-07-14 23:24:45'
             ] );
 
         
@@ -76,10 +76,10 @@ class GalleryTableSeeder extends Seeder
             'link'=>'www.webpage.com',
             'paragraph'=>'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto',
             'img'=>'uploads/gallery/yHmLs1nY31 - identity3.jpg',
-            'id_categorie'=>'1',
+            'id_categorie'=>8,
             'status'=>1,
             'created_at'=>NULL,
-            'updated_at'=>'2017-07-14 21:35:26'
+            'updated_at'=>'2017-07-14 23:24:32'
             ] );
 
         
@@ -94,10 +94,10 @@ class GalleryTableSeeder extends Seeder
             'link'=>'www.webpage.com',
             'paragraph'=>'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto',
             'img'=>'uploads/gallery/ohWjBeoE7m - identity2.png',
-            'id_categorie'=>'1',
+            'id_categorie'=>8,
             'status'=>1,
             'created_at'=>NULL,
-            'updated_at'=>'2017-07-14 21:35:09'
+            'updated_at'=>'2017-07-14 23:24:17'
             ] );
 
         
@@ -112,10 +112,10 @@ class GalleryTableSeeder extends Seeder
             'link'=>'www.webpage.com',
             'paragraph'=>'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto',
             'img'=>'uploads/gallery/IB6zmMuV2j - identity1.jpg',
-            'id_categorie'=>'1',
+            'id_categorie'=>8,
             'status'=>1,
             'created_at'=>NULL,
-            'updated_at'=>'2017-07-14 21:34:52'
+            'updated_at'=>'2017-07-14 23:24:03'
             ] );
 
         
@@ -130,10 +130,10 @@ class GalleryTableSeeder extends Seeder
             'link'=>'www.webpage.com',
             'paragraph'=>'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto',
             'img'=>'uploads/gallery/5ZFRXMFVL2 - photo3.jpg',
-            'id_categorie'=>'1',
+            'id_categorie'=>9,
             'status'=>1,
             'created_at'=>NULL,
-            'updated_at'=>'2017-07-14 21:32:55'
+            'updated_at'=>'2017-07-14 23:23:49'
             ] );
 
         
@@ -148,10 +148,10 @@ class GalleryTableSeeder extends Seeder
             'link'=>'www.webpage.com',
             'paragraph'=>'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto',
             'img'=>'uploads/gallery/4bvpOdsz9z - photo2.jpg',
-            'id_categorie'=>'1',
+            'id_categorie'=>9,
             'status'=>1,
             'created_at'=>NULL,
-            'updated_at'=>'2017-07-14 21:32:42'
+            'updated_at'=>'2017-07-14 23:23:37'
             ] );
 
         
@@ -166,10 +166,10 @@ class GalleryTableSeeder extends Seeder
             'link'=>'www.webpage.com',
             'paragraph'=>'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto',
             'img'=>'uploads/gallery/hrcrnVfHa9 - photo1.jpg',
-            'id_categorie'=>'1',
+            'id_categorie'=>9,
             'status'=>1,
             'created_at'=>NULL,
-            'updated_at'=>'2017-07-14 21:32:24'
+            'updated_at'=>'2017-07-14 23:23:26'
             ] );
 
         
@@ -184,10 +184,10 @@ class GalleryTableSeeder extends Seeder
             'link'=>'www.webpage.com',
             'paragraph'=>'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto',
             'img'=>'uploads/gallery/IHBA7Qe25h - web2.jpg',
-            'id_categorie'=>'1',
+            'id_categorie'=>10,
             'status'=>1,
             'created_at'=>NULL,
-            'updated_at'=>'2017-07-14 21:29:11'
+            'updated_at'=>'2017-07-14 23:23:14'
             ] );
 
         
@@ -202,10 +202,46 @@ class GalleryTableSeeder extends Seeder
             'link'=>'www.fulanito.com',
             'paragraph'=>'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una dist',
             'img'=>'uploads/gallery/XUCqYZjBMl - web1.jpg',
-            'id_categorie'=>'1',
+            'id_categorie'=>10,
             'status'=>1,
-            'created_at'=>'2017-07-14 20:19:43',
-            'updated_at'=>'2017-07-14 21:28:54'
+            'created_at'=>'2017-07-15 01:19:43',
+            'updated_at'=>'2017-07-14 23:23:03'
+            ] );
+
+        
+
+        Gallery::create( [
+            'id'=>12,
+            'tittle1'=>'Baner',
+            'tittle2'=>'Baner',
+            'subtittle'=>'description test',
+            'client'=>'funlano',
+            'date'=>'17/12/1991',
+            'link'=>'www.test.com',
+            'paragraph'=>'asefasdfasd erfsdf ewrt  qwerty qwerty',
+            'img'=>'uploads/gallery/WqjUjxGCcZ - banner.jpg',
+            'id_categorie'=>6,
+            'status'=>1,
+            'created_at'=>'2017-07-14 23:35:02',
+            'updated_at'=>'2017-07-14 23:35:02'
+            ] );
+
+        
+
+        Gallery::create( [
+            'id'=>13,
+            'tittle1'=>'Publicidad',
+            'tittle2'=>'publicidad',
+            'subtittle'=>'publicidad empresarial',
+            'client'=>'fulano mengano',
+            'date'=>'17/12/1991',
+            'link'=>'www.page.com',
+            'paragraph'=>'q3reqwer qwer wer qwer',
+            'img'=>'uploads/gallery/hMrPTujDnx - pub1.jpg',
+            'id_categorie'=>7,
+            'status'=>1,
+            'created_at'=>'2017-07-14 23:37:04',
+            'updated_at'=>'2017-07-14 23:38:51'
             ] );
 
         /*DB::table('galleries')->insert(['id'=>'1',

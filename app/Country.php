@@ -22,4 +22,8 @@ class Country extends Model
     return $this->hasMany('App\Province', 'id');
   }
 
+  public function employe(){
+    return $this->hasMany('App\Employ','id');
+  }
+
 }

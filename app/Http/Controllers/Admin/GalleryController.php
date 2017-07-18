@@ -36,7 +36,9 @@ class GalleryController extends Controller
     public function create()
     {
         $categories = Category::orderBy('id','DESC')->where('thumb','1')->pluck('name','id');
-        return view('adminlte::layouts.gallery.create',compact('categories'));
+        return view('adminlte::layouts.gallery.create',compact(
+            'categories'
+            ));
     }
 
     /**

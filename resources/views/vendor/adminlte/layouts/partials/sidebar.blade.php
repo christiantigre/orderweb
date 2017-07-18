@@ -45,7 +45,7 @@
       <!--  Item Provveedor  -->
       <li><a href="{{ Route('marcas.index') }}"><i class='fa fa-link'></i><span>{{ trans('adminlte_lang::message.sales') }}</span></a></li> 
       <li><a href="{{ Route('marcas.index') }}"><i class='fa fa-link'></i><span>{{ trans('adminlte_lang::message.clients') }}</span></a></li> 
-      <li><a href="{{ Route('marcas.index') }}"><i class='fa fa-link'></i><span>{{ trans('adminlte_lang::message.employees') }}</span></a></li> 
+      <li><a href="{{ Route('employees.index') }}"><i class='fa fa-link'></i><span>{{ trans('adminlte_lang::message.employees') }}</span></a></li> 
       <li><a href="{{ Route('marcas.index') }}"><i class='fa fa-link'></i><span>{{ trans('adminlte_lang::message.proveedor') }}</span></a></li> 
       <!-- Item subList Config -->
       <li class="treeview">
@@ -69,6 +69,7 @@
               <li><a href="{{ url('admin/config') }}">{{ trans('adminlte_lang::message.emp') }}</a></li>      
               <li><a href="{{ Route('money.index') }}">{{ trans('adminlte_lang::message.money') }}</a></li>           
               <li><a href="{{ Route('pay.index') }}">{{ trans('adminlte_lang::message.pay') }}</a></li>              
+              <li><a href="{{ Route('department.index') }}">{{ trans('adminlte_lang::message.zone') }}</a></li>              
             </ul>
           </li> 
 

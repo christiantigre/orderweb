@@ -22,5 +22,10 @@ class Province extends Model
     return $this->hasMany('App\canton', 'id');
   }
 
+  public function employe(){
+    return $this->hasMany('App\Employ','id');
+  }
+
+  
 
 }
