@@ -90,8 +90,8 @@ Route::group(['middleware' => ['auth','admin']], function () {
 	Route::resource('/admin/employees','Admin\EmployeController');
 	Route::get('admin/listemploy','Admin\EmployeController@listall');
 	//Employees//
-	Route::resource('/admin/department','Admin\DepartmentController');
-	Route::get('admin/listzones','Admin\DepartmentController@listall');
+	Route::resource('/admin/departments','Admin\DepartmentController');
+	Route::get('admin/listdepartment','Admin\DepartmentController@listall');
 
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
