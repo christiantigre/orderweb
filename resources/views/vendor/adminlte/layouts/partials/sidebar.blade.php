@@ -44,7 +44,7 @@
       <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.products') }}</span></a></li>
       <!--  Item Provveedor  -->
       <li><a href="{{ Route('marcas.index') }}"><i class='fa fa-link'></i><span>{{ trans('adminlte_lang::message.sales') }}</span></a></li> 
-      <li><a href="{{ Route('marcas.index') }}"><i class='fa fa-link'></i><span>{{ trans('adminlte_lang::message.clients') }}</span></a></li> 
+      <li><a href="{{ Route('clients.index') }}"><i class='fa fa-link'></i><span>{{ trans('adminlte_lang::message.clients') }}</span></a></li> 
       <li><a href="{{ Route('employees.index') }}"><i class='fa fa-link'></i><span>{{ trans('adminlte_lang::message.employees') }}</span></a></li> 
       <li><a href="{{ Route('marcas.index') }}"><i class='fa fa-link'></i><span>{{ trans('adminlte_lang::message.proveedor') }}</span></a></li> 
       <!-- Item subList Config -->

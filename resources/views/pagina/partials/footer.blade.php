@@ -114,12 +114,12 @@
 <!-- About us section end -->
 <div class="section secondary-section">
     <div class="triangle"></div>
-            @foreach($tittlesslides8 as $tittle8)
+    @foreach($tittlesslides8 as $tittle8)
     <div class="container centered">
         <p class="large-text">{{ $tittle8->paragraph }}</p>
         <a href="#" class="button">Elije tu tarjeta de presentación</a>
     </div>
-            @endforeach    
+    @endforeach    
 </div>
 <!-- Client section start -->
 <!-- Client section start -->
@@ -134,27 +134,31 @@
             </div>
             @endforeach
             <div class="row">
-            @foreach($comClies as $coment)
+                @foreach($comClies as $coment)
                 <div class="span4">
                     <div class="testimonial">
                         <p>"{{ $coment->comment }}"</p>
                         <div class="whopic">
                             <div class="arrow"></div>
+                            @if( ($coment->users->perfil) == "")
+                            <img src="{{ asset('uploads/none/none-user1.png') }}" class="centered" alt="client 1">
+                            @else
                             <img src="{{ asset($coment->users->perfil) }}" class="centered" alt="client 1">
+                            @endif
                             <strong>{{ $coment->users->name }}
                                 <small>Cliente</small>
                             </strong>
                         </div>
                     </div>
                 </div>
-            @endforeach            
+                @endforeach            
             </div>
             <p class="testimonial-text">
-            @foreach($tittlesslides9 as $tittle9)
+                @foreach($tittlesslides9 as $tittle9)
                 "
                 {{ $tittle9->paragraph }}
                 "
-            @endforeach            
+                @endforeach            
 
             </p>
         </div>
@@ -173,14 +177,14 @@
                 </ul>
             </div>
             <ul class="row client-slider" id="clint-slider">
-            @foreach($clients as $client)
+                @foreach($clients as $client)
 
                 <li>
                     <a href="">
                         <img src="{{ asset($client->logo) }}" alt="client logo 1">
                     </a>
                 </li>
-            @endforeach            
+                @endforeach            
                 
             </ul>
         </div>
