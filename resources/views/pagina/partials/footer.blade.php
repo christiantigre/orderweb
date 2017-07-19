@@ -93,27 +93,19 @@
                         <span class="bar" data-width="{{ $work->porcentaje }}%"></span>
                         <h3>{{ $work->work }}</h3>
                     </li>
-                    <!--<li>
-                        <span class="bar" data-width="95%"></span>
-                        <h3>Html & Css</h3>
-                    </li>
-                    <li>
-                        <span class="bar" data-width="68%"></span>
-                        <h3>jQuery</h3>
-                    </li>
-                    <li>
-                        <span class="bar" data-width="70%"></span>
-                        <h3>Wordpress</h3>
-                    </li>-->
                     @endforeach
 
                 </ul>
             </div>
             <div class="span6">
                 <div class="highlighted-box center">
-                    <h1>We're Hiring</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, ullamcorper suscipit lobortis nisl ut aliquip consequat. I learned that we can do anything, but we can't do everything...</p>
-                    <button class="button button-sp">Join Us</button>
+                    @foreach($tittlesslides7 as $tittle7)
+                    <h1>{{ $tittle7->tittle }}</h1>
+                    <p>{{ $tittle7->paragraph }}</p>
+                    <a href="">
+                        <button class="button button-sp">Pide el tuyo</button>
+                    </a>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -122,10 +114,12 @@
 <!-- About us section end -->
 <div class="section secondary-section">
     <div class="triangle"></div>
+            @foreach($tittlesslides8 as $tittle8)
     <div class="container centered">
-        <p class="large-text">Elegance is not the abundance of simplicity. It is the absence of complexity.</p>
-        <a href="#" class="button">Purshase now</a>
+        <p class="large-text">{{ $tittle8->paragraph }}</p>
+        <a href="#" class="button">Elije tu tarjeta de presentación</a>
     </div>
+            @endforeach    
 </div>
 <!-- Client section start -->
 <!-- Client section start -->
@@ -140,45 +134,28 @@
             </div>
             @endforeach
             <div class="row">
+            @foreach($comClies as $coment)
                 <div class="span4">
                     <div class="testimonial">
-                        <p>"I've worked too hard and too long to let anything stand in the way of my goals. I will not let my teammates down and I will not let myself down."</p>
+                        <p>"{{ $coment->comment }}"</p>
                         <div class="whopic">
                             <div class="arrow"></div>
-                            <img src="{{ url('pagina/images/Client1.png') }}" class="centered" alt="client 1">
-                            <strong>John Doe
-                                <small>Client</small>
+                            <img src="{{ asset($coment->users->perfil) }}" class="centered" alt="client 1">
+                            <strong>{{ $coment->users->name }}
+                                <small>Cliente</small>
                             </strong>
                         </div>
                     </div>
                 </div>
-                <div class="span4">
-                    <div class="testimonial">
-                        <p>"In motivating people, you've got to engage their minds and their hearts. I motivate people, I hope, by example - and perhaps by excitement, by having productive ideas to make others feel involved."</p>
-                        <div class="whopic">
-                            <div class="arrow"></div>
-                            <img src="{{ url('pagina/images/Client2.png') }}" class="centered" alt="client 2">
-                            <strong>John Doe
-                                <small>Client</small>
-                            </strong>
-                        </div>
-                    </div>
-                </div>
-                <div class="span4">
-                    <div class="testimonial">
-                        <p>"Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. It is wonderful how much may be done if we are always doing."</p>
-                        <div class="whopic">
-                            <div class="arrow"></div>
-                            <img src="{{ url('pagina/images/Client3.png') }}" class="centered" alt="client 3">
-                            <strong>John Doe
-                                <small>Client</small>
-                            </strong>
-                        </div>
-                    </div>
-                </div>
+            @endforeach            
             </div>
             <p class="testimonial-text">
-                "Perfection is Achieved Not When There Is Nothing More to Add, But When There Is Nothing Left to Take Away"
+            @foreach($tittlesslides9 as $tittle9)
+                "
+                {{ $tittle9->paragraph }}
+                "
+            @endforeach            
+
             </p>
         </div>
     </div>
@@ -188,7 +165,7 @@
         <div class="sub-section">
             <div class="title clearfix">
                 <div class="pull-left">
-                    <h3>Our Clients</h3>
+                    <h3>Nuestros Clientes</h3>
                 </div>
                 <ul class="client-nav pull-right">
                     <li id="client-prev"></li>
@@ -196,41 +173,15 @@
                 </ul>
             </div>
             <ul class="row client-slider" id="clint-slider">
+            @foreach($clients as $client)
+
                 <li>
                     <a href="">
-                        <img src="{{ url('pagina/images/clients/ClientLogo01.png') }}" alt="client logo 1">
+                        <img src="{{ asset($client->logo) }}" alt="client logo 1">
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        <img src="{{ url('pagina/images/clients/ClientLogo02.png') }}" alt="client logo 2">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="{{ url('pagina/images/clients/ClientLogo03.png') }}" alt="client logo 3">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="{{ url('pagina/images/clients/ClientLogo04.png') }}" alt="client logo 4">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="{{ url('pagina/images/clients/ClientLogo05.png') }}" alt="client logo 5">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="{{ url('pagina/images/clients/ClientLogo02.png') }}" alt="client logo 6">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="{{ url('pagina/images/clients/ClientLogo04.png') }}" alt="client logo 7">
-                    </a>
-                </li>
+            @endforeach            
+                
             </ul>
         </div>
     </div>

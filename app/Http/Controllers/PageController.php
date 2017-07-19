@@ -10,6 +10,8 @@ use App\Gallery;
 use App\Category;
 use App\Employ;
 use App\Work;
+use App\comentCli;
+use App\Cliente;
 
 class PageController extends Controller
 {
@@ -23,12 +25,17 @@ class PageController extends Controller
         $slider = Slider::orderBy('id','DESC')->get();
         $demos = Demostraction::orderBy('id','DESC')->get();
         $works = Work::orderBy('id','DESC')->get();
+        $clients = Cliente::orderBy('id','DESC')->get();
+        $comClies = comentCli::orderBy('id','DESC')->where('accept','1')->get();
         $tittlesslides1 = tittles::orderBy('id','DESC')->where('id','1')->get();
         $tittlesslides2 = tittles::orderBy('id','DESC')->where('id','2')->get();
         $tittlesslides3 = tittles::orderBy('id','DESC')->where('id','3')->get();
         $tittlesslides4 = tittles::orderBy('id','DESC')->where('id','4')->get();
         $tittlesslides5 = tittles::orderBy('id','DESC')->where('id','5')->get();
         $tittlesslides6 = tittles::orderBy('id','DESC')->where('id','6')->get();
+        $tittlesslides7 = tittles::orderBy('id','DESC')->where('id','7')->get();
+        $tittlesslides8 = tittles::orderBy('id','DESC')->where('id','8')->get();
+        $tittlesslides9 = tittles::orderBy('id','DESC')->where('id','9')->get();
         $thumbails = Gallery::orderBy('id','DESC')->where('status','1')->get();
         $categories = Category::orderBy('id','DESC')->where('thumb','1')->get();
         $emploies = Employ::orderBy('id','DESC')->where('web','1')->get();
@@ -42,10 +49,15 @@ class PageController extends Controller
             ,'tittlesslides4'
             ,'tittlesslides5'
             ,'tittlesslides6'
+            ,'tittlesslides7'
+            ,'tittlesslides8'
+            ,'tittlesslides9'
             ,'thumbails'
             ,'categories'
             ,'emploies'
             ,'works'
+            ,'comClies'
+            ,'clients'
             ));
     }
 

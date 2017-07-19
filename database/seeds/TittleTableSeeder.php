@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\tittles;
 
 class TittleTableSeeder extends Seeder
 {
@@ -32,5 +33,23 @@ class TittleTableSeeder extends Seeder
             'tittle'=>'Contacto',
             'paragraph'=>'Para dudas o sugerencias nos puedes encontrar llamandonos a los numeros que se muestran a continuacion.'
             ]);
+        DB::table('tittles')->insert(['id'=>'6',
+            'tittle'=>'Contacto',
+            'paragraph'=>'Para dudas o sugerencias nos puedes encontrar llamandonos a los numeros que se muestran a continuacion.'
+            ]);
+        DB::table('tittles')->insert(['id'=>'7',
+            'tittle'=>'Contacto',
+            'paragraph'=>'Para dudas o sugerencias nos puedes encontrar llamandonos a los numeros que se muestran a continuacion.'
+            ]);
+        DB::table('tittles')->insert(['id'=>'8',
+            'tittle'=>'Contacto',
+            'paragraph'=>'Para dudas o sugerencias nos puedes encontrar llamandonos a los numeros que se muestran a continuacion.'
+            ]);
+        DB::table('tittles')->insert(['id'=>'9',
+            'tittle'=>'',
+            'paragraph'=>'Perfection is Achieved Not When There Is Nothing More to Add, But When There Is Nothing Left to Take Away'
+            ]);
+            
+           
+        }
     }
-}
